@@ -1,0 +1,12 @@
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.dll.config
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Model.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Model.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.xml
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csprojResolveAssemblyReference.cache
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.pdb

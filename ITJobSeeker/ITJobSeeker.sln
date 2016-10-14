@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITJobSeeker.Model", "ITJobSeeker.Model\ITJobSeeker.Model.csproj", "{65F066C8-BA1B-487C-B113-73D18D5F397A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITJobSeeker.Repository", "ITJobSeeker.Repository\ITJobSeeker.Repository.csproj", "{25F27C25-137E-40CE-9D5E-19208FEF6017}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65F066C8-BA1B-487C-B113-73D18D5F397A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F066C8-BA1B-487C-B113-73D18D5F397A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F066C8-BA1B-487C-B113-73D18D5F397A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F066C8-BA1B-487C-B113-73D18D5F397A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
