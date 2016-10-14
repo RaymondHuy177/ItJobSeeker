@@ -14,9 +14,12 @@ namespace ITJobSeeker.Repository
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Company> Jobs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
         }
     }
 }

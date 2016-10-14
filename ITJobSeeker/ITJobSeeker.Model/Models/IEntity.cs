@@ -7,5 +7,6 @@ namespace ITJobSeeker.Model.Models
     {
         [Required]
         Guid ID { get; set; }
+        
     }
 }

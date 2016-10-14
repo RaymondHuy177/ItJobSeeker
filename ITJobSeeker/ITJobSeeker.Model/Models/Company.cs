@@ -2,24 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ITJobSeeker.Model.Models
 {
-    public class Role : IEntity
+    public class Company : IEntity
     {
-        public Role()
-        {
-            ID = Guid.NewGuid();
-            Users = new List<User>();
-        }
-
-        [Key]
+        [Key, ForeignKey("User")]
         public Guid ID { get; set; }
 
-        [Required]
         public string Name { get; set; }
 
-        public virtual ICollection<User> Users { get; set; }
-        
+        public string Address { get; set; }
+
+        public virtual User User { get; set; }
     }
 }
