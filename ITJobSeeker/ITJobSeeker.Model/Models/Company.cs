@@ -10,6 +10,11 @@ namespace ITJobSeeker.Model.Models
 {
     public class Company : IEntity
     {
+        public Company() 
+        {
+            Jobs = new List<Job>();
+        }
+
         [Key, ForeignKey("User")]
         public Guid ID { get; set; }
 
@@ -18,5 +23,12 @@ namespace ITJobSeeker.Model.Models
         public string Address { get; set; }
 
         public virtual User User { get; set; }
+
+        public virtual ICollection<Job> Jobs { get; set; }
+
+        public Guid AvatarID { get; set; }
+
+        [ForeignKey("AvatarID")]
+        public virtual Picture Avatar { get; set; }
     }
 }

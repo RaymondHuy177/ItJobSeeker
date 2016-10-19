@@ -25,11 +25,18 @@ namespace ITJobSeeker.Model.Models
 
         [Required]
         public string Password { get; set; }
-        
-        [Required]
-        public Guid RoleId { get; set; }
 
+        [Required]
+        public Guid RoleID { get; set; }
+
+        public Guid AvatarID { get; set; }
+
+        [ForeignKey("RoleID")]
         public virtual Role Role { get; set; }
-        
+
+        [ForeignKey("AvatarID")]
+        public virtual Picture Avatar { get; set; }
+
+        public virtual Company Company { get; set; }
     }
 }

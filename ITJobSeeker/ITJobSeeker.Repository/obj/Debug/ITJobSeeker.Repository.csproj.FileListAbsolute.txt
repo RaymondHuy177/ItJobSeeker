@@ -10,3 +10,17 @@ D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\Enti
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csprojResolveAssemblyReference.cache
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.dll
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.dll.config
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Model.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Model.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.xml
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csprojResolveAssemblyReference.cache
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.Migrations.first.resources
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csproj.GenerateResource.Cache

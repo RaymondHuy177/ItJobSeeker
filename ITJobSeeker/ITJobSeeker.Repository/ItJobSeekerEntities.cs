@@ -15,11 +15,17 @@ namespace ITJobSeeker.Repository
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Company> Companies { get; set; }
-        public DbSet<Company> Jobs { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Picture> Pictures { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 
+        }
+
+        public virtual void Commit()
+        {
+            base.SaveChanges();
         }
     }
 }

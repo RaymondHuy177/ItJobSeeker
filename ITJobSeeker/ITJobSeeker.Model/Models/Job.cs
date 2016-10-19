@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,12 @@ namespace ITJobSeeker.Model.Models
 
         [Required, MaxLength(25), MinLength(2)]
         public string ThirdTechStack { get; set; }
-        
+
         public bool IsActive { get; set; }
+
+        public Guid CompanyID { get; set; }
+
+        [ForeignKey("CompanyID")]
+        public virtual Company Comapny { get; set; }
     }
 }

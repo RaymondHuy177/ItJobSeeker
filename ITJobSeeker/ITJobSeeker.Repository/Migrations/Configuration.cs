@@ -25,10 +25,10 @@ namespace ITJobSeeker.Repository.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
-            context.Roles.Add(new Model.Models.Role { Name = "Admin" });
-            context.Roles.Add(new Model.Models.Role { Name = "JobSeeker" });
-            context.Roles.Add(new Model.Models.Role { Name = "Recruiter" });
+            ////
+            //context.Roles.Add(new Model.Models.Role { Name = "Admin" });
+            //context.Roles.Add(new Model.Models.Role { Name = "JobSeeker" });
+            //context.Roles.Add(new Model.Models.Role { Name = "Recruiter" });
         }
     }
 }
