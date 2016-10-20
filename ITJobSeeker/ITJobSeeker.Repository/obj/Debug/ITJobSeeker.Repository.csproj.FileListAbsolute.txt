@@ -24,3 +24,5 @@ D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Reposit
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.pdb
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.Migrations.first.resources
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csproj.GenerateResource.Cache
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.Migrations.first.resources
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csproj.GenerateResource.Cache

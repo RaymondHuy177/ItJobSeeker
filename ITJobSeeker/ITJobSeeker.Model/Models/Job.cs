@@ -13,12 +13,18 @@ namespace ITJobSeeker.Model.Models
         public Job()
         {
             IsActive = false;
+            PostedDate = DateTime.Now;
         }
 
         [Key]
         public Guid ID { get; set; }
 
         public DateTime PostedDate { get; set; }
+
+        public string Location { get; set; }
+
+        [Required]
+        public string Name { get; set; }
 
         [Required]
         public string Description { get; set; }
