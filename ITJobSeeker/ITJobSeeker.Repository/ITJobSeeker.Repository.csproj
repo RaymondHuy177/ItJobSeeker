@@ -59,17 +59,21 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="ItJobSeekerEntities.cs" />
-    <Compile Include="Migrations\201610200933312_first.cs" />
-    <Compile Include="Migrations\201610200933312_first.Designer.cs">
-      <DependentUpon>201610200933312_first.cs</DependentUpon>
+    <Compile Include="Migrations\201610240345312_first.cs" />
+    <Compile Include="Migrations\201610240345312_first.Designer.cs">
+      <DependentUpon>201610240345312_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CompanyRepository.cs" />
     <Compile Include="Repositories\JobRepository.cs" />
+    <Compile Include="Repositories\PictureRepository.cs" />
+    <Compile Include="Repositories\TechnologyKeywordRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="RepositoryInterfaces\ICompanyRepository.cs" />
     <Compile Include="RepositoryInterfaces\IJobRepository.cs" />
+    <Compile Include="RepositoryInterfaces\IPictureRepository.cs" />
+    <Compile Include="RepositoryInterfaces\ITechnologyKeywordRepository.cs" />
     <Compile Include="RepositoryInterfaces\IUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,8 +87,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610200933312_first.resx">
-      <DependentUpon>201610200933312_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610240345312_first.resx">
+      <DependentUpon>201610240345312_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,11 @@
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Service.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Service.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Model.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Repository.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\EntityFramework.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Model.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Repository.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\EntityFramework.xml
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.csprojResolveAssemblyReference.cache
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.pdb

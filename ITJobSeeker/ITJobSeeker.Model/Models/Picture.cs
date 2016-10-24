@@ -18,6 +18,9 @@ namespace ITJobSeeker.Model.Models
         [Key]
         public Guid ID { get; set; }
 
+        [Required]
+        public string Name { get; set; }
+
         public byte[] Data { get; set; }
 
         public virtual ICollection<User> Users { get; set; }

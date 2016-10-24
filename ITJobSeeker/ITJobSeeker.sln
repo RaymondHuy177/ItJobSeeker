@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITJobSeeker.Model", "ITJobS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITJobSeeker.Repository", "ITJobSeeker.Repository\ITJobSeeker.Repository.csproj", "{25F27C25-137E-40CE-9D5E-19208FEF6017}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITJobSeeker.Service", "ITJobSeeker.Service\ITJobSeeker.Service.csproj", "{94C68D9A-DCC2-4393-9B71-58DA75D984EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITJobSeeker.Web", "ITJobSeeker.Web\ITJobSeeker.Web.csproj", "{70520D46-8099-4BDE-B811-B82F775F703C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25F27C25-137E-40CE-9D5E-19208FEF6017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C68D9A-DCC2-4393-9B71-58DA75D984EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C68D9A-DCC2-4393-9B71-58DA75D984EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C68D9A-DCC2-4393-9B71-58DA75D984EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C68D9A-DCC2-4393-9B71-58DA75D984EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70520D46-8099-4BDE-B811-B82F775F703C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70520D46-8099-4BDE-B811-B82F775F703C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70520D46-8099-4BDE-B811-B82F775F703C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70520D46-8099-4BDE-B811-B82F775F703C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

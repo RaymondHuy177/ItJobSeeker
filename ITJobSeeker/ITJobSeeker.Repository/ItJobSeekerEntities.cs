@@ -17,6 +17,7 @@ namespace ITJobSeeker.Repository
         public DbSet<Company> Companies { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Picture> Pictures { get; set; }
+        public DbSet<TechnologyKeyword> TechnologyKeywords { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
