@@ -6,4 +6,3 @@ D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\b
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\bin\Debug\ITJobSeeker.Model.pdb
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.dll
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.pdb
-D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.csprojResolveAssemblyReference.cache
