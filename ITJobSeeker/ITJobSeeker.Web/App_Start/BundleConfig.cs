@@ -28,8 +28,9 @@ namespace ITJobSeeker.Web
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.min.css", "~/Content/font-awesome.css", "~/Content/Site.css",
-                      "~/Content/site.css", "~/Content/style.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/font-awesome.css",
+                      "~/Content/style.css"));
         }
     }
 }

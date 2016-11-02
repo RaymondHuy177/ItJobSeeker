@@ -115,7 +115,7 @@ body a {
 #search_wrapper {
     padding-top: 8em;
     text-align: center;
-    background: url("../images/FindJobs2.jpg"),  url("../images/FindJobs2.jpg");
+    background: url("../images/common/FindJobs2.jpg"),  url("../images/common/FindJobs2.jpg");
     background-position: -450px 0, 900px 0;
     background-repeat: no-repeat;
     background-size: 65%;
