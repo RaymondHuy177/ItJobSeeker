@@ -79,3 +79,4 @@ D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Microsoft.Owin.Se
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.dll
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.csprojResolveAssemblyReference.cache

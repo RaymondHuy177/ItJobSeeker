@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace ITJobSeeker.Web.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
-        public ActionResult Index()
+        // GET: Admin
+        public ActionResult Login()
         {
             return View();
         }
-        
     }
 }

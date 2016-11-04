@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ITJobSeeker.Repository.Infrastructure.DbFactory">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Infrastructure\DbFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Infrastructure.Disposable">
+    <Position X="3" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\Disposable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Infrastructure.RepositoryBase&lt;T&gt;" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAgAABgAAAAAAEAAAEAAAAACgAAAIAAAIA=</HashCode>
+      <FileName>Infrastructure\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Infrastructure.UnitOfWork" BaseTypeListCollapsed="true">
+    <Position X="15" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\UnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.ItJobSeekerEntities">
+    <Position X="14" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAGAAAAAAAAAAAEAAAAAAEgAwAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ItJobSeekerEntities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Migrations.Configuration">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Migrations\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Repositories.CompanyRepository" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\CompanyRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Repositories.JobRepository">
+    <Position X="3" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\JobRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Repositories.PictureRepository">
+    <Position X="5.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\PictureRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Repositories.TechnologyKeywordRepository">
+    <Position X="7.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Repositories\TechnologyKeywordRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITJobSeeker.Repository.Repositories.UserRepository">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ITJobSeeker.Repository.Infrastructure.IDbFactory">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Infrastructure\IDbFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.Infrastructure.IRepository&lt;T&gt;" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAgAABAAAAAAAAAAAEAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Infrastructure\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.Infrastructure.IUnitOfWork">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.RepositoryInterfaces.ICompanyRepository">
+    <Position X="0.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryInterfaces\ICompanyRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.RepositoryInterfaces.IJobRepository">
+    <Position X="3" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryInterfaces\IJobRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.RepositoryInterfaces.IPictureRepository">
+    <Position X="5.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryInterfaces\IPictureRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.RepositoryInterfaces.ITechnologyKeywordRepository">
+    <Position X="7.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>RepositoryInterfaces\ITechnologyKeywordRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITJobSeeker.Repository.RepositoryInterfaces.IUserRepository">
+    <Position X="9.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryInterfaces\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

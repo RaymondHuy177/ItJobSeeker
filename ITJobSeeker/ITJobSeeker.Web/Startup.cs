@@ -8,6 +8,7 @@ namespace ITJobSeeker.Web
     {
         public void Configuration(IAppBuilder app)
         {
+            
         }
     }
 }
