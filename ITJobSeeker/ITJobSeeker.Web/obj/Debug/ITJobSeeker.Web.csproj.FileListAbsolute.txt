@@ -79,4 +79,14 @@ D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Microsoft.Owin.Se
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.dll
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Autofac.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\ITJobSeeker.Service.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\ITJobSeeker.Model.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\ITJobSeeker.Repository.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\ITJobSeeker.Service.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Autofac.xml
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\ITJobSeeker.Model.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\ITJobSeeker.Repository.pdb
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.csprojResolveAssemblyReference.cache
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Autofac.Integration.Mvc.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\Autofac.Integration.Mvc.xml

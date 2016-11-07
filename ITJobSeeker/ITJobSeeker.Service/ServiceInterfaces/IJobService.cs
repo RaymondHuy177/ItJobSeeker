@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ITJobSeeker.Model.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace ITJobSeeker.Service.ServiceInterfaces
 {
     public interface IJobService
     {
+        IEnumerable<Job> GetJobsByPage(int page = 1);
     }
 }
