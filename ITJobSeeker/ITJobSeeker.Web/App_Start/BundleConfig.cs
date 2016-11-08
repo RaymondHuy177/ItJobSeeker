@@ -25,10 +25,10 @@ namespace ITJobSeeker.Web
 
             bundles.Add(new ScriptBundle("~/bundles/finalScript").Include(
                         "~/Scripts/bootstrap.min.js",
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap-3.1.1.min.css",
                       "~/Content/font-awesome.css",
                       "~/Content/style.css"));
         }
