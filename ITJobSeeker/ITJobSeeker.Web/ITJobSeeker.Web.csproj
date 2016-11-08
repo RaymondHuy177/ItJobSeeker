@@ -214,6 +214,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\GridJobViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-3.1.1.min.css" />
@@ -318,7 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\JobManagement\" />
     <Folder Include="Views\Job\" />
@@ -336,6 +336,10 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ITJobSeeker.Model\ITJobSeeker.Model.csproj">
+      <Project>{65f066c8-ba1b-487c-b113-73d18d5f397a}</Project>
+      <Name>ITJobSeeker.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ITJobSeeker.Repository\ITJobSeeker.Repository.csproj">
       <Project>{25F27C25-137E-40CE-9D5E-19208FEF6017}</Project>
       <Name>ITJobSeeker.Repository</Name>

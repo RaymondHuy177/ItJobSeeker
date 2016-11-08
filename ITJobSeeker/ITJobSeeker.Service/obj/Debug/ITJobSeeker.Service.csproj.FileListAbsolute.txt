@@ -9,3 +9,14 @@ D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\EntityF
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.csprojResolveAssemblyReference.cache
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.dll
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Service.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Service.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Model.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Repository.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\EntityFramework.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Model.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\ITJobSeeker.Repository.pdb
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\bin\Debug\EntityFramework.xml
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.csprojResolveAssemblyReference.cache
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.dll
+D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Service\obj\Debug\ITJobSeeker.Service.pdb

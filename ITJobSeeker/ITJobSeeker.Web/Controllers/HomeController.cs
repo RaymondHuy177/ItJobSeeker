@@ -1,4 +1,6 @@
-﻿using ITJobSeeker.Service.ServiceInterfaces;
+﻿using ITJobSeeker.Model.Models;
+using ITJobSeeker.Service.ServiceInterfaces;
+using ITJobSeeker.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,11 @@ namespace ITJobSeeker.Web.Controllers
             this.jobService = _jobService;
         }
 
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            return View();
+            List<Job> jobs = jobService.GetJobsByPage(page).ToList();
+            GridJobViewModel jobVM = new GridJobViewModel(jobs);
+            return View(jobVM);
         }
         
     }
