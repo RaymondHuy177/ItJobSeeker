@@ -56,7 +56,7 @@
                     Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
-                    AvatarID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b"),
+                    AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"),
                     RoleID = new Guid("4c06668e-2625-4275-8e87-07f071d0f358")
                 },
                 new Model.Models.User
@@ -71,7 +71,7 @@
                     Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
-                    AvatarID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b"),
+                    AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"),
                     RoleID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f")
                 }
                 );
@@ -80,6 +80,9 @@
         {
             context.Pictures.Add(
                 new Model.Models.Picture { ID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b"), Name = "MyPicture" }
+                );
+            context.Pictures.Add(
+                new Model.Models.Picture { ID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"), Name = "DefaultPicture" }
                 );
         }
         private void InsertInitialRole(ItJobSeekerEntities context)
@@ -90,6 +93,9 @@
                 );
             context.Roles.Add(
                 new Model.Models.Role { ID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f"), Name = "Recruiter" }
+                );
+            context.Roles.Add(
+                new Model.Models.Role { ID = new Guid("8fab4cd3-d18a-4926-980f-d4859510fddf"), Name = "JobSeeker" }
                 );
 
         }

@@ -45,10 +45,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceImpl\CompanyService.cs" />
     <Compile Include="ServiceImpl\TechnologyKeywordService.cs" />
+    <Compile Include="ServiceImpl\UserService.cs" />
     <Compile Include="ServiceInterfaces\ICompanyService.cs" />
     <Compile Include="ServiceInterfaces\IJobService.cs" />
     <Compile Include="ServiceInterfaces\IPictureService.cs" />
     <Compile Include="ServiceInterfaces\ITechnologyKeywordService.cs" />
+    <Compile Include="ServiceInterfaces\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ITJobSeeker.Model\ITJobSeeker.Model.csproj">

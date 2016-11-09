@@ -18,6 +18,7 @@ namespace ITJobSeeker.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutofacConfig.Run();
+            AutoMapperConfig.Configure();
         }
     }
 }

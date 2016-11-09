@@ -182,3 +182,5 @@ D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.csprojResolveAssemblyReference.cache
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.dll
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\obj\Debug\ITJobSeeker.Web.pdb
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\AutoMapper.dll
+D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Web\bin\AutoMapper.xml
