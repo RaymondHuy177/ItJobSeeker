@@ -24,6 +24,10 @@ namespace ITJobSeeker.Web.Controllers
             GridJobViewModel jobVM = new GridJobViewModel(jobs);
             return View(jobVM);
         }
-        
+        [ChildActionOnly]
+        public ActionResult Menu()
+        {
+            return PartialView();
+        }
     }
 }

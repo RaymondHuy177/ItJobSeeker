@@ -47,20 +47,30 @@
                 new Model.Models.User
                 {
                     ID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b"),
+                    UserName = "example",
                     Email = "example@yahoo.com",
                     FirstName = "Nguyen",
                     LastName = "Khang",
                     Password = "password",
+                    Location= "HoChiMinh",
+                    Address = "123 Pham Phu Thu",
+                    IsMale = true,
+                    Telephone = "0123456789",
                     AvatarID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b"),
                     RoleID = new Guid("4c06668e-2625-4275-8e87-07f071d0f358")
                 },
                 new Model.Models.User
                 {
                     ID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
-                    Email = "example@yahoo.com",
+                    Email = "example2@yahoo.com",
+                    UserName = "example2",
                     FirstName = "Quan",
                     LastName = "Mai",
                     Password = "password2",
+                    Location = "HoChiMinh",
+                    Address = "123 Pham Phu Thu",
+                    IsMale = true,
+                    Telephone = "0123456789",
                     AvatarID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b"),
                     RoleID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f")
                 }
@@ -76,10 +86,10 @@
         {
 
             context.Roles.Add(
-                new Model.Models.Role { ID = new Guid("4c06668e-2625-4275-8e87-07f071d0f358"), Name = "admin" }
+                new Model.Models.Role { ID = new Guid("4c06668e-2625-4275-8e87-07f071d0f358"), Name = "Admin" }
                 );
             context.Roles.Add(
-                new Model.Models.Role { ID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f"), Name = "recruiter" }
+                new Model.Models.Role { ID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f"), Name = "Recruiter" }
                 );
 
         }
@@ -122,10 +132,7 @@
                 new Company
                 {
                     ID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
-                    Name = "KMS",
-                    Address = "123 Phạm phú thứ",
-                    Location = "HoCHiMinh",
-                    AvatarID = new Guid("644e1dd7-2a7f-18fb-b8ed-ed78c3f92c2b")
+                    Name = "KMS"
                 }
                 );
         }

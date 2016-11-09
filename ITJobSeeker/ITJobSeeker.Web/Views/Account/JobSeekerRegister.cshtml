@@ -1,0 +1,212 @@
+﻿
+<div class="modal fade" id="jobSeekerRegisterModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Job Seeker Register</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtUserName" class="col-sm-5 control-label">
+                                    Account Name (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtUserName" required />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtPassword" class="col-sm-5 control-label">
+                                    Password (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="txtPassword" required />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtConfirmPassword" class="col-sm-4 control-label">
+                                    Confirm Pass (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="txtConfirmPassword" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-5 control-label">
+                                    First Name (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtFirstName" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthday" class="col-sm-5 control-label">
+                                    Last Name (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtLastName" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-5">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <fieldset class="gender col-sm-4">
+                                    <legend class="gender"><b>Giới tính (*)<b></legend>
+                                    <div class="control-group">
+                                        <label class="control-label input-label" for="male">
+                                            <input type="radio" name="gender" id="rdoMale" value="male">
+                                            Male
+                                        </label>
+                                        <br>
+                                        <label class="control-label input-label" for="female">
+                                            <input type="radio" name="gender" id="rdoFemale" value="female">
+                                            Female
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtEmail" class="col-sm-5 control-label">
+                                    Email (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtEmail" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtPhone" class="col-sm-5 control-label">
+                                    Phone
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtPhone" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtLocation" class="col-sm-5 control-label">
+                                    Location
+                                </label>
+                                <div class="col-sm-7">
+                                    <select class="form-control" id="ddlLocation" />
+                                    <option>Hồ Chí Minh</option>
+                                    <option>Đà Nẵng</option>
+                                    <option>Hà Nội</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtAddress" class="col-sm-5 control-label">
+                                    Address (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="email" class="form-control" id="txtAddress" />
+                                    <br>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br />
+                <div class="modal-footer">
+                    <button type="button" id="btnSubmit" onclick="myFunction()" class="btn btn-info">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var txtUserName = $("#txtUserName").val();
+        var txtPassword = $("#txtPassword").val();
+        var txtConfirmPassword = $("#txtConfirmPassword").val();
+        var txtFirstName = $("#txtFirstName").val();
+        var txtLastName = $("#txtLastName").val();
+        var txtEmail = $("#txtEmail").val();
+        var txtPhone = $("#txtPhone").val();
+        var ddlLocation = $("#ddlLocation").val();
+        var txtAddress = $("#txtAddress").val();
+        var isMale = $("#rdoMale").prop("checked");
+        var jobSeeker = {
+            UserName: txtUserName, FirstName: txtFirstName, LastName: txtLastName,
+            Password: txtPassword, ConfirmPassword: txtConfirmPassword, Email: txtEmail,
+            Phone: txtPhone, Location: ddlLocation, Address: txtAddress, IsMale: isMale
+        }
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("JobSeekerRegister", "Account")',
+            data: JSON.stringify({ jobSeekerForm: jobSeeker }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: successFunc,
+            error: errorFunc
+        });
+
+        function successFunc(data, status) {
+            alert(data);
+        }
+
+        function errorFunc(data) {
+            alert(data);
+            alert('error');
+        }
+        //console.log($("#txtUserName").val());
+        //console.log($("#txtPassword").val());
+        //console.log($("#txtConfirmPassword").val());
+        //console.log($("#txtFirstName").val());
+        //console.log($("#txtLastName").val());
+        //console.log($("#txtEmail").val());
+        //console.log($("#txtPhone").val());
+        //console.log($("#ddlLocation").val());
+        //console.log($("#txtAddress").val());
+        //console.log($("#rdoMale").prop("checked"));
+        //console.log($("#rdoFemale").val());
+        
+        //var data = { UserName : }
+    }
+</script>

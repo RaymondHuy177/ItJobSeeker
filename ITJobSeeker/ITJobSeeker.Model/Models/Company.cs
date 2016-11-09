@@ -20,19 +20,9 @@ namespace ITJobSeeker.Model.Models
 
         public string Name { get; set; }
 
-        [Required]
-        public string Address { get; set; }
-
-        [Required]
-        public string Location { get; set; }
-
         public virtual User User { get; set; }
 
         public virtual ICollection<Job> Jobs { get; set; }
-
-        public Guid AvatarID { get; set; }
-
-        [ForeignKey("AvatarID")]
-        public virtual Picture Avatar { get; set; }
+        
     }
 }

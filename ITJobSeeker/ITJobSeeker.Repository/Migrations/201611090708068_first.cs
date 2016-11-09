@@ -13,52 +13,10 @@ namespace ITJobSeeker.Repository.Migrations
                     {
                         ID = c.Guid(nullable: false),
                         Name = c.String(),
-                        Address = c.String(nullable: false),
-                        Location = c.String(nullable: false),
-                        AvatarID = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Pictures", t => t.AvatarID, cascadeDelete: true)
                 .ForeignKey("dbo.Users", t => t.ID)
-                .Index(t => t.ID)
-                .Index(t => t.AvatarID);
-            
-            CreateTable(
-                "dbo.Pictures",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        Name = c.String(nullable: false),
-                        Data = c.Binary(),
-                    })
-                .PrimaryKey(t => t.ID);
-            
-            CreateTable(
-                "dbo.Users",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        FirstName = c.String(nullable: false, maxLength: 15),
-                        LastName = c.String(nullable: false, maxLength: 15),
-                        Email = c.String(nullable: false),
-                        Password = c.String(nullable: false),
-                        RoleID = c.Guid(nullable: false),
-                        AvatarID = c.Guid(nullable: false),
-                    })
-                .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Pictures", t => t.AvatarID, cascadeDelete: true)
-                .ForeignKey("dbo.Roles", t => t.RoleID, cascadeDelete: true)
-                .Index(t => t.RoleID)
-                .Index(t => t.AvatarID);
-            
-            CreateTable(
-                "dbo.Roles",
-                c => new
-                    {
-                        ID = c.Guid(nullable: false),
-                        Name = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.ID);
+                .Index(t => t.ID);
             
             CreateTable(
                 "dbo.Jobs",
@@ -82,6 +40,48 @@ namespace ITJobSeeker.Repository.Migrations
                 .Index(t => t.CompanyID);
             
             CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        ID = c.Guid(nullable: false),
+                        UserName = c.String(nullable: false, maxLength: 15),
+                        FirstName = c.String(nullable: false, maxLength: 15),
+                        LastName = c.String(nullable: false, maxLength: 15),
+                        Email = c.String(nullable: false),
+                        Password = c.String(nullable: false),
+                        Address = c.String(nullable: false),
+                        Location = c.String(nullable: false),
+                        Telephone = c.String(),
+                        IsMale = c.Boolean(nullable: false),
+                        RoleID = c.Guid(nullable: false),
+                        AvatarID = c.Guid(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.Pictures", t => t.AvatarID, cascadeDelete: true)
+                .ForeignKey("dbo.Roles", t => t.RoleID, cascadeDelete: true)
+                .Index(t => t.RoleID)
+                .Index(t => t.AvatarID);
+            
+            CreateTable(
+                "dbo.Pictures",
+                c => new
+                    {
+                        ID = c.Guid(nullable: false),
+                        Name = c.String(nullable: false),
+                        Data = c.Binary(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Roles",
+                c => new
+                    {
+                        ID = c.Guid(nullable: false),
+                        Name = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.TechnologyKeywords",
                 c => new
                     {
@@ -95,20 +95,18 @@ namespace ITJobSeeker.Repository.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.Companies", "ID", "dbo.Users");
-            DropForeignKey("dbo.Jobs", "CompanyID", "dbo.Companies");
-            DropForeignKey("dbo.Companies", "AvatarID", "dbo.Pictures");
             DropForeignKey("dbo.Users", "RoleID", "dbo.Roles");
             DropForeignKey("dbo.Users", "AvatarID", "dbo.Pictures");
-            DropIndex("dbo.Jobs", new[] { "CompanyID" });
+            DropForeignKey("dbo.Jobs", "CompanyID", "dbo.Companies");
             DropIndex("dbo.Users", new[] { "AvatarID" });
             DropIndex("dbo.Users", new[] { "RoleID" });
-            DropIndex("dbo.Companies", new[] { "AvatarID" });
+            DropIndex("dbo.Jobs", new[] { "CompanyID" });
             DropIndex("dbo.Companies", new[] { "ID" });
             DropTable("dbo.TechnologyKeywords");
-            DropTable("dbo.Jobs");
             DropTable("dbo.Roles");
-            DropTable("dbo.Users");
             DropTable("dbo.Pictures");
+            DropTable("dbo.Users");
+            DropTable("dbo.Jobs");
             DropTable("dbo.Companies");
         }
     }

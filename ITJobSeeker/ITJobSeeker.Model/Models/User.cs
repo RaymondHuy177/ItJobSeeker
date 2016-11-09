@@ -15,6 +15,9 @@ namespace ITJobSeeker.Model.Models
         public Guid ID { get; set; }
 
         [Required, MaxLength(15)]
+        public string UserName { get; set; }
+
+        [Required, MaxLength(15)]
         public string FirstName { get; set; }
 
         [Required, MaxLength(15)]
@@ -25,6 +28,16 @@ namespace ITJobSeeker.Model.Models
 
         [Required]
         public string Password { get; set; }
+
+        [Required]
+        public string Address { get; set; }
+
+        [Required]
+        public string Location { get; set; }
+
+        public string Telephone { get; set; }
+
+        public bool IsMale { get; set; }
 
         [Required]
         public Guid RoleID { get; set; }

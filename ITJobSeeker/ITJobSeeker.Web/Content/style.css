@@ -678,12 +678,12 @@ span.yellow a {
     outline: none;
 }
 
-.form-control:focus {
+/*.form-control:focus {
     border-color: #444 !important;
     outline: 0;
     box-shadow: none !important;
     text-shadow: none !important;
-}
+}*/
 
 .grid_3 p {
     color: #fff;
@@ -989,12 +989,12 @@ span.m_2 {
     margin-bottom: 1em;
 }
 
-input.form-control {
+/*input.form-control {
     box-shadow: none;
     background-color: #fff;
     padding: 20px;
     border-radius: 0px;
-}
+}*/
 
 .input-group-addon {
     padding: 6px 12px;
