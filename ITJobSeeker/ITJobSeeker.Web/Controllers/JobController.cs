@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ITJobSeeker.Model.Models;
+using ITJobSeeker.Service.ServiceInterfaces;
+using ITJobSeeker.Web.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +11,12 @@ namespace ITJobSeeker.Web.Controllers
 {
     public class JobController : Controller
     {
+        private readonly IJobService jobService;
+
+        public JobController(IJobService _jobService)
+        {
+            jobService = _jobService;
+        }
         // GET: Job
         public ActionResult GetAllJobs(int page = 0)
         {
@@ -24,9 +33,12 @@ namespace ITJobSeeker.Web.Controllers
             return View();
         }
 
-        public ActionResult JobDetail(string id)
+        public ActionResult Detail(string id)
         {
-            return View();
+            Job job = jobService.GetDetailJob(new Guid(id));
+            JobDetailPageViewModel data = new JobDetailPageViewModel();
+            data.PrepareViewModel(job, job.Comapny);
+            return View(data);
         }
 
     }

@@ -28,6 +28,7 @@ namespace ITJobSeeker.Repository.Migrations
                         Name = c.String(nullable: false),
                         Description = c.String(nullable: false),
                         Requirement = c.String(nullable: false),
+                        Salary = c.String(nullable: false),
                         Benefits = c.String(nullable: false),
                         FirstTechStack = c.String(nullable: false, maxLength: 25),
                         SecondTechStack = c.String(nullable: false, maxLength: 25),

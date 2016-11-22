@@ -13,7 +13,7 @@ namespace ITJobSeeker.Repository.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611090708068_first"; }
+            get { return "201611220406255_first"; }
         }
         
         string IMigrationMetadata.Source

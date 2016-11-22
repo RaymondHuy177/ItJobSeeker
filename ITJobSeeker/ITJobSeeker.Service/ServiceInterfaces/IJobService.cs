@@ -10,5 +10,7 @@ namespace ITJobSeeker.Service.ServiceInterfaces
     public interface IJobService
     {
         IEnumerable<Job> GetJobsByPage(int page = 1);
+
+        Job GetDetailJob(Guid id);
     }
 }

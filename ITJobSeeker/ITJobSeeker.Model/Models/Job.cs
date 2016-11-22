@@ -33,6 +33,9 @@ namespace ITJobSeeker.Model.Models
         public string Requirement { get; set; }
 
         [Required]
+        public string Salary { get; set; }
+
+        [Required]
         public string Benefits { get; set; }
 
         [Required, MaxLength(25), MinLength(2)]

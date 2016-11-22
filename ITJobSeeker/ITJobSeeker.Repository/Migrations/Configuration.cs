@@ -114,7 +114,8 @@
                     ThirdTechStack = "Java",
                     Requirement = "Requirement",
                     Location = "HoChiMinh",
-                    Name = "7 Software Engineer"
+                    Name = "7 Software Engineer",
+                    Salary = "Negotiable"
                 },
                 new Job
                 {
@@ -128,6 +129,7 @@
                     ThirdTechStack = "Java",
                     Requirement = "Requirement2",
                     Location = "HoChiMinh",
+                    Salary = "Negotiable",
                     Name = "7 Java Software Engineer"
                 }
                 );

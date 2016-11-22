@@ -9,7 +9,8 @@ namespace ITJobSeeker.Service.ServiceInterfaces
 {
     public interface IUserService
     {
-        void AddJobSeeker(User jobSeeker);
-        void SaveJobSeeker();
+        string AddJobSeeker(User jobSeeker);
+        void Save();
+        string RegisterJobSeeker(User jobSeeker);
     }
 }

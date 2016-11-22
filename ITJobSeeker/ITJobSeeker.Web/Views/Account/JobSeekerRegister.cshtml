@@ -187,8 +187,10 @@
             error: errorFunc
         });
 
-        function successFunc(data, status) {
-            alert(data);
+        function successFunc(data) {
+            console.log(data);
+            if (data == "Success")
+                $('#jobSeekerRegisterModal').modal('hide');
         }
 
         function errorFunc(data) {

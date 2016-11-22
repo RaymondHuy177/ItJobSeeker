@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ITJobSeeker.Model.Models;
+using ITJobSeeker.Service.Common;
 using ITJobSeeker.Service.ServiceInterfaces;
 using ITJobSeeker.Web.ViewModels;
 using System;
@@ -28,16 +29,21 @@ namespace ITJobSeeker.Web.Controllers
         public JsonResult JobSeekerRegister(JobSeekerRegisterFormViewModel jobSeekerForm)
         {
             var jobSeeker = Mapper.Map<JobSeekerRegisterFormViewModel, User>(jobSeekerForm);
-            userService.AddJobSeeker(jobSeeker);
-            try
-            {
-                userService.SaveJobSeeker();
-            }
-            catch (Exception ex)
-            {
-                string s = ex.Message;
-            }
-            return Json("Hello");
+            string message = userService.RegisterJobSeeker(jobSeeker);
+            return Json(message);
+        }
+
+        public ActionResult RecruiterRegister()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public JsonResult RecruiterRegister(JobSeekerRegisterFormViewModel jobSeekerForm)
+        {
+            var jobSeeker = Mapper.Map<JobSeekerRegisterFormViewModel, User>(jobSeekerForm);
+            string message = userService.RegisterJobSeeker(jobSeeker);
+            return Json(message);
         }
 
         public ActionResult Login()

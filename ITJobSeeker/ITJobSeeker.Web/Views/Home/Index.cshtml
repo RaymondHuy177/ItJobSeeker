@@ -45,10 +45,10 @@
             {
                 <div class="col_1">
                     <div class="col-sm-4 row_2">
-                        <a href="single.html"><img src="~/images/common/a1.jpg" class="img-responsive" alt="" /></a>
+                        <a href="@Url.Action("Detail", "Job", new {defaultUrl = "asd", id = item.ID }, null)"><img src="~/images/common/a1.jpg" class="img-responsive" alt="" /></a>
                     </div>
                     <div class="col-sm-8 row_1">
-                        <h4><a href="single.html">@item.Name</a></h4>
+                        <h4><a href="@Url.Action("Detail", "Job", new {defaultUrl = "asd", id = item.ID }, null)">@item.Name</a></h4>
                         <h6>@item.Location<span class="dot"></span></h6>
                         <p>@item.Description </p>
 
@@ -62,10 +62,10 @@
             {
                 <div class="col_1">
                     <div class="col-sm-4 row_2">
-                        <a href="single.html"><img src="~/images/common/a1.jpg" class="img-responsive" alt="" /></a>
+                        <a href="@Url.Action("Detail", "Job", new { id = item.ID }, null)"><img src="~/images/common/a1.jpg" class="img-responsive" alt="" /></a>
                     </div>
                     <div class="col-sm-8 row_1">
-                        <h4><a href="single.html">@item.Name</a></h4>
+                        <h4><a href="@Url.Action("Detail", "Job", new { id = item.ID }, null)">@item.Name</a></h4>
                         <h6>@item.Location<span class="dot"></span></h6>
                         <p>@item.Description </p>
 

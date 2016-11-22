@@ -11,6 +11,7 @@ namespace ITJobSeeker.Repository
         public ItJobSeekerEntities()
             : base("name=ItJobSeekerEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
