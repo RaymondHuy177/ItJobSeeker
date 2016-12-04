@@ -28,6 +28,7 @@ namespace ITJobSeeker.Web.App_Start
             builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
             builder.RegisterType<ConstraintService>().As<IConstraintService>().InstancePerRequest();
             builder.RegisterType<TechnologyKeywordService>().As<ITechnologyKeywordService>().InstancePerRequest();
+            builder.RegisterType<AuthenticateService>().As<IAuthenticateService>().InstancePerRequest();
 
             builder.RegisterType<JobRepository>().As<IJobRepository>().InstancePerRequest();
             builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();

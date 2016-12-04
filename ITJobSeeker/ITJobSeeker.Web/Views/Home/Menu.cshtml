@@ -1,4 +1,5 @@
-﻿<nav class="navbar navbar-default" role="navigation">
+﻿@model ITJobSeeker.Service.Common.Account
+<nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -9,6 +10,12 @@
             </button>
             <a class="navbar-brand" href="index.html"><img src="~/images/common/logo.png" alt="" /></a>
         </div>
+        @if (Model.HasLoggin)
+        {
+        }
+        else
+        {
+        }
         <!--/.navbar-header-->
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
             <ul class="nav navbar-nav">
@@ -41,7 +48,7 @@
                         <li><a href="jobs.html">Defence Jobs</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
             </ul>
         </div>
         <div class="clearfix"> </div>

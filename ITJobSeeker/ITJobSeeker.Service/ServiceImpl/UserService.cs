@@ -64,6 +64,7 @@ namespace ITJobSeeker.Service.ServiceImpl
         {
             Recruiter.AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411");
             Recruiter.RoleID = roleRepository.Get(r => r.Name == "Recruiter").ID;
+            Recruiter.Password = PasswordEncrypt.ConverToMD5(Recruiter.Password);
             userRepository.Add(Recruiter);
             companyRepository.Add(company);
             unitOfWork.Commit();

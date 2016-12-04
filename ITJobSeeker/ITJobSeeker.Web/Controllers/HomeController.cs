@@ -1,4 +1,5 @@
 ﻿using ITJobSeeker.Model.Models;
+using ITJobSeeker.Service.Common;
 using ITJobSeeker.Service.ServiceInterfaces;
 using ITJobSeeker.Web.ViewModels;
 using System;
@@ -27,7 +28,10 @@ namespace ITJobSeeker.Web.Controllers
         [ChildActionOnly]
         public ActionResult Menu()
         {
-            return PartialView();
+            Account account = (Account)Session["User"];
+            if (account == null)
+                account = new Account();
+            return PartialView(account);
         }
     }
 }

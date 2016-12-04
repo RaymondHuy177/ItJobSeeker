@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Common\ActionStatus.cs" />
     <Compile Include="Common\PasswordEncrypt.cs" />
+    <Compile Include="ServiceImpl\AuthenticateService.cs" />
     <Compile Include="ServiceImpl\ConstraintService.cs" />
     <Compile Include="ServiceImpl\JobService.cs" />
     <Compile Include="ServiceImpl\PictureService.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="ServiceImpl\CompanyService.cs" />
     <Compile Include="ServiceImpl\TechnologyKeywordService.cs" />
     <Compile Include="ServiceImpl\UserService.cs" />
+    <Compile Include="ServiceInterfaces\IAuthenticateService.cs" />
     <Compile Include="ServiceInterfaces\ICompanyService.cs" />
     <Compile Include="ServiceInterfaces\IConstraintService.cs" />
     <Compile Include="ServiceInterfaces\IJobService.cs" />

@@ -14,10 +14,12 @@ namespace ITJobSeeker.Web.Controllers
     public class AccountController : Controller
     {
         private readonly IUserService userService;
+        private readonly IAuthenticateService authenticateService;
 
-        public AccountController(IUserService _userService)
+        public AccountController(IUserService _userService, IAuthenticateService _authenticateService)
         {
-            this.userService = _userService;
+            userService = _userService;
+            authenticateService = _authenticateService;
         }
         // GET: User
         public ActionResult JobSeekerRegister()
@@ -65,7 +67,26 @@ namespace ITJobSeeker.Web.Controllers
         [HttpPost]
         public ActionResult Login(LoginFormViewModel loginForm)
         {
-            return PartialView();
+            StandardResponse response = new StandardResponse();
+            try
+            {
+                User user = authenticateService.Login(loginForm.UserName, loginForm.Password);
+                if (user != null)
+                {
+                    Session["User"] = user;
+                }
+                else
+                {
+                    response.Status = 1;
+                    response.Message = "Wrong Username or Password";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Status = 1;
+                response.Message = ex.Message;
+            }
+            return Json(response);
         }
     }
 }

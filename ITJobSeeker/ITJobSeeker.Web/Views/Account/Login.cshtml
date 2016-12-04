@@ -1,0 +1,74 @@
+﻿<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Recruiter Register</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtLoginUserName" class="col-sm-5 control-label">
+                                    Account Name (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="txtLoginUserName" required />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtLoginPassword" class="col-sm-5 control-label">
+                                    Password (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="password" class="form-control" id="txtLoginPassword" required />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br />
+                <div class="modal-footer">
+                    <button type="button" id="btnSubmit" onclick="Login()" class="btn btn-info">Login</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function Login() {
+        var txtUserName = $('#txtLoginUserName').val();
+        var txtPassword = $('#txtLoginPassword').val();
+
+        var login = {
+            UserName: txtUserName,
+            Password: txtPassword 
+        }
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("Login", "Account")',
+            data: JSON.stringify({ loginForm: login }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                if (data.Status == 0) {
+                    // TODO
+                    $('#loginModal').modal('hide');
+                }
+            },
+            error: function (data, message) { }
+        });
+
+    }
+</script>
