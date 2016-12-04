@@ -26,7 +26,7 @@ namespace ITJobSeeker.Service.ServiceImpl
         }
         public IEnumerable<Job> GetJobsByPage(int page = 1)
         {
-            var listJobs = jobRepository.GetAll();
+            var listJobs = jobRepository.GetJobsWithCompany();
             int skipJobs = (page - 1) * JobsPerPage;
             int jobsRemain = listJobs.Count() - skipJobs;
             if (jobsRemain > JobsPerPage)
@@ -44,6 +44,26 @@ namespace ITJobSeeker.Service.ServiceImpl
         public void AddJob(Job job)
         {
             jobRepository.Add(job);
+            unitOfWork.Commit();
+        }
+
+        public IEnumerable<Job> GetJobsByRecruiter(Guid RecruiterID)
+        {
+            return jobRepository.GetMany(j => j.CompanyID == RecruiterID);
+        }
+
+        public void EditJob(Job job)
+        {
+            Job editJob = jobRepository.GetById(job.ID);
+            editJob.Benefits = job.Benefits;
+            editJob.Description = job.Description;
+            editJob.FirstTechStack = job.FirstTechStack;
+            editJob.SecondTechStack = job.SecondTechStack;
+            editJob.ThirdTechStack = job.ThirdTechStack;
+            editJob.Name = job.Name;
+            editJob.IsActive = false;
+            editJob.Requirement = job.Requirement;
+            editJob.Salary = job.Salary;
             unitOfWork.Commit();
         }
     }

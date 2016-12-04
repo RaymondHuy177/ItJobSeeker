@@ -147,6 +147,7 @@
                     ThirdTechStack = "Java",
                     Requirement = "Requirement",
                     Name = "7 Software Engineer",
+                    ExpiredDate = DateTime.Now.AddDays(10),
                     Salary = "Negotiable"
                 },
                 new Job
@@ -161,6 +162,7 @@
                     ThirdTechStack = "Java",
                     Requirement = "Requirement2",
                     Salary = "Negotiable",
+                    ExpiredDate = DateTime.Now.AddDays(10),
                     Name = "7 Java Software Engineer"
                 }
                 );

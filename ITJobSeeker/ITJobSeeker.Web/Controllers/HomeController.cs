@@ -21,7 +21,7 @@ namespace ITJobSeeker.Web.Controllers
         public ActionResult Index(int page = 1)
         {
             List<Job> jobs = jobService.GetJobsByPage(page).ToList();
-            GridJobViewModel jobVM = new GridJobViewModel(jobs);
+            JobGridViewModel jobVM = new JobGridViewModel(jobs);
             return View(jobVM);
         }
         [ChildActionOnly]

@@ -3,6 +3,7 @@ using ITJobSeeker.Repository.Infrastructure;
 using ITJobSeeker.Repository.RepositoryInterfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace ITJobSeeker.Repository.Repositories
 {
@@ -30,6 +31,18 @@ namespace ITJobSeeker.Repository.Repositories
             var jobs = this.DbContext.Jobs.Where(n => n.Comapny.Name.Contains(location)).ToList();
 
             return jobs;
+        }
+
+        public IEnumerable<Job> GetJobsWithCompany()
+        {
+            //var jobs = from job in DbContext.Jobs
+            //           join company in DbContext.Companies
+            //           on job.CompanyID equals company.ID
+            //           select job;
+            //return jobs;
+            //IEnumerable<Job> jobs = DbContext.Jobs.AsEnumerable();
+            //DbContext.Entry(jobs).Reference(i=>i.)
+            return DbContext.Jobs.Include("CompanyID").AsEnumerable();
         }
     }
 }

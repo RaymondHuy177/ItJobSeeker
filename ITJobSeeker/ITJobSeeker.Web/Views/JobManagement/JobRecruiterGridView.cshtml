@@ -2,13 +2,13 @@
 @{
     Layout = null;
 }
-@model ITJobSeeker.Web.ViewModels.FormCreateJobViewModel
+@model ITJobSeeker.Web.ViewModels.JobRecruiterGridView
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CreateJob</title>
+    <title>Recruiter Job GridView</title>
     <link rel="stylesheet" href="~/assets/vendor/bootstrap/css/bootstrap.css" />
 
     <link rel="stylesheet" href="~/assets/vendor/font-awesome/css/font-awesome.css" />
@@ -128,24 +128,7 @@
 
                                     </ul>
                                 </li>
-                                <li class="nav-parent">
-                                    <a>
-                                        <i class="fa fa-copy" aria-hidden="true"></i>
-                                        <span>Food Management</span>
-                                    </a>
-                                    <ul class="nav nav-children">
-                                        <li>
-                                            <a href="@Url.Action("GridFood", "FoodManagement")">
-                                                Food GridView
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.Action("CreateFood", "FoodManagement")">
-                                                Add Food
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                
                                 <li class="nav-parent">
                                     <a>
                                         <i class="fa fa-tasks" aria-hidden="true"></i>
@@ -223,7 +206,7 @@
 
             <section role="main" class="content-body">
                 <header class="page-header">
-                    <h2>Basic Forms</h2>
+                    <h2>Job Management</h2>
 
                     <div class="right-wrapper pull-right">
                         <ol class="breadcrumbs">
@@ -241,121 +224,68 @@
                 </header>
 
                 <!-- start: page -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <section class="panel">
-                            <header class="panel-heading">
-                                <div class="panel-actions">
-                                    <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
-                                    <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                <section class="panel">
+                    <header class="panel-heading">
+                        <div class="panel-actions">
+                            <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                            <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                        </div>
+
+                        <h2 class="panel-title">List Job</h2>
+                    </header>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="mb-md">
+                                    <button id="addToTable-test" class="btn btn-primary" onclick="NavigateToCreateUserPage()"> Add <i class="fa fa-plus"></i></button>
                                 </div>
-
-                                <h2 class="panel-title">Form Elements</h2>
-                            </header>
-                            <div class="panel-body">
-                                <form class="form-horizontal form-bordered">
-                                    <div class="validation-message" id="message-summary">
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="inputDefault">Job Title</label>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" id="txtName">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="inputDefault">Salary</label>
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control" id="txtSalary">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">Default Datepicker</label>
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-calendar"></i>
-                                                </span>
-                                                <input type="text" data-plugin-datepicker class="form-control" id="txtExpiredDate">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="inputSuccess">First Technology Required</label>
-                                        <div class="col-md-6">
-                                            <select data-plugin-selectTwo class="form-control populate" id="ddlFirstTechStackChosen">
-                                                @foreach (var keyword in Model.TechStackDropDownList)
-                                                {
-                                                    <option value="@keyword.Value">@keyword.Value</option>
-                                                }
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="inputSuccess">Second Technology Required</label>
-                                        <div class="col-md-6">
-                                            <select data-plugin-selectTwo class="form-control populate" id="ddlSecondTechStackChosen">
-                                                @foreach (var keyword in Model.TechStackDropDownList)
-                                                {
-                                                    <option value="@keyword.Value">@keyword.Value</option>
-                                                }
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="inputSuccess">Third Technology Required</label>
-                                        <div class="col-md-6">
-                                            <select data-plugin-selectTwo class="form-control populate" id="ddlThirdTechStackChosen">
-                                                @foreach (var keyword in Model.TechStackDropDownList)
-                                                {
-                                                    <option value="@keyword.Value">@keyword.Value</option>
-                                                }
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">Description</label>
-                                        <div class="col-md-9">
-                                            <div id="txtDescription"><p>Your Description</p></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">Requirement</label>
-                                        <div class="col-md-9">
-                                            <div id="txtRequirement"><p>Your Requirement</p></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">Benefits</label>
-                                        <div class="col-md-9">
-                                            <div id="txtBenefit"><p>Your Benefit</p></div>
-                                        </div>
-                                    </div>
-
-                                    <br />
-                                    <footer class="panel-footer">
-                                        <div class="row">
-                                            <div class="col-sm-9 col-sm-offset-3">
-                                                <button class="mb-xs mt-xs mr-xs btn btn-lg btn-primary" onclick="AddJob()" type="button">Submit</button>
-                                                <button type="reset" class="mb-xs mt-xs mr-xs btn btn-lg btn-primary">Cancel</button>
-                                            </div>
-                                        </div>
-                                    </footer>
-                                </form>
                             </div>
-                        </section>
+                        </div>
+                        <table class="table table-bordered table-striped mb-none" id="datatable-editable">
+                            <thead>
+                                <tr id="row-deleted">
+                                    <th>Name</th>
+                                    <th>Salary</th>
+                                    <th>FirstTechStack</th>
+                                    <th>SecondTechStack</th>
+                                    <th>ThirdTechStack</th>
+                                    <th>Posted Date</th>
+                                    <th>Expired Date</th>
+                                    <th>Active</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="datatable-editable-tbody">
+                                @foreach (var item in Model.Jobs)
+                                {
+                                    <tr class="gradeU">
 
+                                        <td>@item.Name</td>
+                                        <td>@item.Salary</td>
+                                        <td>@item.FirstTechStack</td>
+                                        <td>@item.SecondTechStack</td>
+                                        <td>@item.ThirdTechStack</td>
+                                        <td>@item.PostedDate</td>
+                                        <td>@item.ExpiredDate</td>
+                                        <td>
+                                            @if (item.IsActive)
+                                            {
+                                                <input type="checkbox" checked="checked" disabled="disabled" />
+                                            }
+                                            else
+                                            {
+                                                <input type="checkbox" disabled="disabled" />
+                                            }
 
+                                        </td>
+                                        <td><button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("EditJob", "JobManagement", new { jobID = @item.ID})'">Edit</button></td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
                     </div>
-                </div>
+                </section>
 
                 <!-- end: page -->
             </section>
@@ -373,7 +303,7 @@
                     <p id="message-body"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="Back()">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -404,56 +334,8 @@
 <script src="~/assets/javascripts/tables/examples.datatables.editable.js"></script>
 <script src="~/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
 <script>
-    $(function () {
-        $('#txtDescription').summernote({
-            height: 150
-        });
-        $('#txtRequirement').summernote({
-            height: 150
-        });
-        $('#txtBenefit').summernote({
-            height: 150
-        });
-    })
-    function Back() {
-        window.location.href = '@Url.Action("JobRecruiterGridView", "JobManagement")';
-    }
-    function AddJob() {
-        var job = {
-            Name: $('#txtName').val(),
-            Description: $('#txtDescription').summernote('code'),
-            Requirement: $('#txtRequirement').summernote('code'),
-            Benefits: $('#txtBenefit').summernote('code'),
-            Salary: $('#txtSalary').val(),
-            FirstTechStack: $('#ddlFirstTechStackChosen :selected').val(),
-            SecondTechStack: $('#ddlSecondTechStackChosen :selected').val(),
-            ThirdTechStack: $('#ddlThirdTechStackChosen :selected').val(),
-            ExpiredDate: $('#txtExpiredDate').val(),
-        }
-        console.log(job);
-        $.ajax({
-            type: "POST",
-            url: '/JobManagement/CreateJob',
-            data: JSON.stringify({ formVM: job }),
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function (data) {
-                if (data.Status == 0) {
-                    $('#message-body').text('Register Successfully');
-                    $('#modalMessage').modal("show");
-                    //window.location.href = '@Url.Action("AccountGridView", "AccountManagement")';
-                }
-                else {
-                    $('#message-summary').html(
-                        "<ul style='display:block'>" +
-                        "<li><label class='error' style='display: inline-block'>" + data.Message + "</label></li></ul>");
-                }
-            },
-            error: function (data, status) {
-                alert(data);
-            }
-        });
-        return false;
+    function NavigateToCreateUserPage() {
+        window.location.href = '@Url.Action("CreateJob", "JobManagement")';
     }
 </script>
 

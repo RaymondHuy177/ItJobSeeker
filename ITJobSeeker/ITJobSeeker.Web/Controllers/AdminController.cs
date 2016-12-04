@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ITJobSeeker.Model.Models;
+using ITJobSeeker.Service.ServiceInterfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,17 @@ namespace ITJobSeeker.Web.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
-        public ActionResult Login()
+        private readonly IJobService jobService;
+
+        public AdminController(IJobService _jobService)
         {
-            return View();
+            jobService = _jobService;
+        }
+        // GET: Admin
+        public ActionResult AllJobs(int page = 1)
+        {
+            IEnumerable<Job> jobs = jobService.GetJobsByPage(page);
+            return View(jobs);
         }
     }
 }

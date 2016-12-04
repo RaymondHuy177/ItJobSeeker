@@ -22,7 +22,7 @@ namespace ITJobSeeker.Repository
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<Job>().HasRequired(j => j.Comapny).WithMany(c => c.Jobs);
         }
 
         public virtual void Commit()

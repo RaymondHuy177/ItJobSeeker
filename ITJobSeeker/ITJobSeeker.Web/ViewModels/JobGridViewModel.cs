@@ -6,11 +6,11 @@ using System.Web;
 
 namespace ITJobSeeker.Web.ViewModels
 {
-    public class GridJobViewModel
+    public class JobGridViewModel
     {
         public IEnumerable<Job> FirstColumnJob;
         public IEnumerable<Job> SecondColumnJob;
-        public GridJobViewModel(IEnumerable<Job> jobs)
+        public JobGridViewModel(IEnumerable<Job> jobs)
         {
             int paginition = jobs.Count() / 2;
             if (jobs.Count() % 2 == 0)

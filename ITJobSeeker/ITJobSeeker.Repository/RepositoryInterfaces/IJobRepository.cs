@@ -11,7 +11,7 @@ namespace ITJobSeeker.Repository.RepositoryInterfaces
     public interface IJobRepository : IRepository<Job>
     {
         Job GetJobDetailByName(string jobName);
-
+        IEnumerable<Job> GetJobsWithCompany();
         List<Job> GetListJobByName(string jobName);
 
         List<Job> GetListJobByLocation(string location);
