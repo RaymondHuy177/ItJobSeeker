@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Account.cs" />
     <Compile Include="Common\ActionStatus.cs" />
     <Compile Include="Common\PasswordEncrypt.cs" />
     <Compile Include="ServiceImpl\AuthenticateService.cs" />

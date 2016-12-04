@@ -229,6 +229,7 @@
     <Compile Include="ViewModels\JobRecruiterGridView.cs" />
     <Compile Include="ViewModels\JobSeekerRegisterFormViewModel.cs" />
     <Compile Include="ViewModels\LoginFormViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\RecruiterRegisterFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -510,6 +511,7 @@
     <Content Include="images\img1.jpg" />
     <Content Include="images\img2.jpg" />
     <Content Include="images\img3.jpg" />
+    <Content Include="images\job-seeker\f11.jpg" />
     <Content Include="images\job1.png" />
     <Content Include="images\job2.png" />
     <Content Include="images\logo-comp.jpg" />

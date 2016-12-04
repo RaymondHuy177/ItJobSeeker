@@ -12,6 +12,6 @@ namespace ITJobSeeker.Service.ServiceInterfaces
     {
         User Login(string username, string password);
 
-        Account CreateAccountSession(string username);
+        Account CreateAccountSession(User user);
     }
 }

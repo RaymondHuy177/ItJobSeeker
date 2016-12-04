@@ -21,7 +21,7 @@ namespace ITJobSeeker.Service.Common
             if (user.Role.Name == "Recruiter")
                 IsRecruiter = true;
             else if (user.Role.Name == "JobSeeker")
-                IsRecruiter = true;
+                IsJobSeeker = true;
         }
     }
 }

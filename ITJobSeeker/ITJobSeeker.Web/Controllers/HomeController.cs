@@ -28,7 +28,7 @@ namespace ITJobSeeker.Web.Controllers
         [ChildActionOnly]
         public ActionResult Menu()
         {
-            Account account = (Account)Session["User"];
+            Account account = (Account)Session["Account"];
             if (account == null)
                 account = new Account();
             return PartialView(account);

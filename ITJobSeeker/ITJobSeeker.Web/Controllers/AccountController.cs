@@ -73,7 +73,8 @@ namespace ITJobSeeker.Web.Controllers
                 User user = authenticateService.Login(loginForm.UserName, loginForm.Password);
                 if (user != null)
                 {
-                    Session["User"] = user;
+                    Account acc = authenticateService.CreateAccountSession(user);
+                    Session["Account"] = acc;
                 }
                 else
                 {
@@ -86,6 +87,12 @@ namespace ITJobSeeker.Web.Controllers
                 response.Status = 1;
                 response.Message = ex.Message;
             }
+            return Json(response);
+        }
+
+        public JsonResult Logout()
+        {
+            StandardResponse response = new StandardResponse();
             return Json(response);
         }
     }
