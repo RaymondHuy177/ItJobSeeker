@@ -33,6 +33,7 @@ namespace ITJobSeeker.Web.App_Start
             builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>().InstancePerRequest();
             builder.RegisterType<TechnologyKeywordRepository>().As<ITechnologyKeywordRepository>().InstancePerRequest();
+            builder.RegisterType<RoleRepository>().As<IRoleRepository>().InstancePerRequest();
 
             IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

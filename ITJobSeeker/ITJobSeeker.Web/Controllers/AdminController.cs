@@ -22,5 +22,55 @@ namespace ITJobSeeker.Web.Controllers
             IEnumerable<Job> jobs = jobService.GetJobsByPage(page);
             return View(jobs);
         }
+
+        public JsonResult DeActiveJob(string jobID)
+        {
+            StandardResponse response = new StandardResponse();
+            try
+            {
+                Job job = jobService.GetDetailJob(new Guid(jobID));
+                job.IsActive = false;
+                jobService.SaveJob();
+            }
+            catch (Exception ex)
+            {
+                response.Status = 1;
+                response.Message = ex.Message;
+            }
+            return Json(response);
+        }
+
+        public JsonResult ActiveJob(string jobID)
+        {
+            StandardResponse response = new StandardResponse();
+            try
+            {
+                Job job = jobService.GetDetailJob(new Guid(jobID));
+                job.IsActive = true;
+                jobService.SaveJob();
+            }
+            catch (Exception ex)
+            {
+                response.Status = 1;
+                response.Message = ex.Message;
+            }
+            return Json(response);
+        }
+
+        public JsonResult DeleteJob(string jobID)
+        {
+            StandardResponse response = new StandardResponse();
+            try
+            {
+                Job job = jobService.GetDetailJob(new Guid(jobID));
+                jobService.DeleteJob(job);
+            }
+            catch (Exception ex)
+            {
+                response.Status = 1;
+                response.Message = ex.Message;
+            }
+            return Json(response);
+        }
     }
 }

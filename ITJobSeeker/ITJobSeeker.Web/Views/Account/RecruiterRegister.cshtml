@@ -5,18 +5,18 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Job Seeker Register</h4>
+                <h4 class="modal-title">Recruiter Register</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-sm-6">
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="txtUserName" class="col-sm-5 control-label">
+                                <label for="txtRecruiterUserName" class="col-sm-5 control-label">
                                     Account Name (*)
                                 </label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtUserName" required />
+                                    <input type="text" class="form-control" id="txtRecruiterUserName" required />
                                 </div>
                             </div>
                         </form>
@@ -26,11 +26,11 @@
                     <div class="col-sm-6">
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="txtPassword" class="col-sm-5 control-label">
+                                <label for="txtRecruiterPassword" class="col-sm-5 control-label">
                                     Password (*)
                                 </label>
                                 <div class="col-sm-7">
-                                    <input type="password" class="form-control" id="txtPassword" required />
+                                    <input type="password" class="form-control" id="txtRecruiterPassword" required />
                                 </div>
                             </div>
                         </form>
@@ -38,11 +38,11 @@
                     <div class="col-sm-6">
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="txtConfirmPassword" class="col-sm-4 control-label">
+                                <label for="txtRecruiterConfirmPassword" class="col-sm-4 control-label">
                                     Confirm Pass (*)
                                 </label>
                                 <div class="col-sm-7">
-                                    <input type="password" class="form-control" id="txtConfirmPassword" />
+                                    <input type="password" class="form-control" id="txtRecruiterConfirmPassword" />
                                 </div>
                             </div>
                         </form>
@@ -53,39 +53,11 @@
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
                                 <label for="name" class="col-sm-5 control-label">
-                                    First Name (*)
+                                    Company Name (*)
                                 </label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtFirstName" />
+                                    <input type="text" class="form-control" id="txtCompanyName" />
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="birthday" class="col-sm-5 control-label">
-                                    Last Name (*)
-                                </label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtLastName" />
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-sm-5">
-                        <form role="form" class="form-horizontal">
-                            <div class="form-group">
-                                <fieldset class="gender col-sm-4">
-                                    <legend class="gender"><b>Giới tính (*)<b></legend>
-                                    <div class="control-group">
-                                        <label class="control-label input-label" for="male">
-                                            <input type="radio" name="gender" id="rdoMale" value="male">
-                                            Male
-                                        </label>
-                                        <br>
-                                        <label class="control-label input-label" for="female">
-                                            <input type="radio" name="gender" id="rdoFemale" value="female">
-                                            Female
-                                        </label>
-                                    </div>
-                                </fieldset>
                             </div>
                         </form>
                     </div>
@@ -94,11 +66,11 @@
                     <div class="col-sm-6">
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="txtEmail" class="col-sm-5 control-label">
+                                <label for="txtRecruiterEmail" class="col-sm-5 control-label">
                                     Email (*)
                                 </label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtEmail" />
+                                    <input type="text" class="form-control" id="txtRecruiterEmail" />
                                 </div>
                             </div>
                         </form>
@@ -108,11 +80,45 @@
                     <div class="col-sm-6">
                         <form role="form" class="form-horizontal">
                             <div class="form-group">
-                                <label for="txtPhone" class="col-sm-5 control-label">
+                                <label for="txtRecruiterPhone" class="col-sm-5 control-label">
                                     Phone
                                 </label>
                                 <div class="col-sm-7">
-                                    <input type="text" class="form-control" id="txtPhone" />
+                                    <input type="text" class="form-control" id="txtRecruiterPhone" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtLocation" class="col-sm-5 control-label">
+                                    Company Type
+                                </label>
+                                <div class="col-sm-7">
+                                    <select class="form-control" id="ddlType" />
+                                    <option>Product</option>
+                                    <option>Outsourcing</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="txtAddress" class="col-sm-5 control-label">
+                                    Company Size (*)
+                                </label>
+                                <div class="col-sm-7">
+                                    <select class="form-control" id="ddlSize" />
+                                    <option>Start up 1-10</option>
+                                    <option>Small 11-50</option>
+                                    <option>Medium 51-150</option>
+                                    <option>Huge 150+</option>
+                                    </select>
                                 </div>
                             </div>
                         </form>
@@ -151,7 +157,7 @@
                 </div>
                 <br />
                 <div class="modal-footer">
-                    <button type="button" id="btnSubmit" onclick="myFunction()" class="btn btn-info">Register</button>
+                    <button type="button" id="btnSubmit" onclick="registerRecruiter()" class="btn btn-info">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
@@ -159,3 +165,49 @@
         </div>
     </div>
 </div>
+<script>
+    function registerRecruiter() {
+        console.log($("#txtRecruiterUserName").val());
+        var txtUserName = $('#txtRecruiterUserName').val();
+        var txtPassword = $('#txtRecruiterPassword').val();
+        var txtConfirmPassword = $("#txtRecruiterConfirmPassword").val();
+        var txtCompanyName = $("#txtCompanyName").val();
+        var txtEmail = $("#txtRecruiterEmail").val();
+        var txtPhone = $("#txtRecruiterPhone").val();
+        var ddlLocation = $("#ddlLocation :selected").val();
+        var txtAddress = $("#txtAddress").val();
+        var ddlType = $("#ddlType :selected").val();
+        var ddlSize = $("#ddlSize :selected").val();
+
+        var recruiter = {
+            UserName: txtUserName, CompanyName: txtCompanyName, CompanySize: ddlSize,
+            Password: txtPassword, ConfirmPassword: txtConfirmPassword, Email: txtEmail,
+            Phone: txtPhone, Location: ddlLocation, Address: txtAddress, CompanyType: ddlType
+        }
+        console.log(recruiter);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("RecruiterRegister", "Account")',
+            data: JSON.stringify({ recruiterForm: recruiter }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: successFunc,
+            error: errorFunc
+        });
+
+        function successFunc(data) {
+            console.log(data);
+            if (data.Status == 0)
+            {
+                // TODO
+                $('#recruiterRegisterModal').modal('hide');
+            }
+            
+        }
+
+        function errorFunc(data) {
+            alert(data);
+            alert('error');
+        }
+    }
+</script>

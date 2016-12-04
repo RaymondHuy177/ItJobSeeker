@@ -26,6 +26,10 @@ namespace ITJobSeeker.Model.Models
         [Required]
         public string Location { get; set; }
 
+        public string Type { get; set; }
+
+        public string Size { get; set; }
+
         public virtual User User { get; set; }
 
         public virtual ICollection<Job> Jobs { get; set; }

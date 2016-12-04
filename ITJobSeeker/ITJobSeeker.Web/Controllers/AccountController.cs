@@ -39,16 +39,33 @@ namespace ITJobSeeker.Web.Controllers
         }
 
         [HttpPost]
-        public JsonResult RecruiterRegister(JobSeekerRegisterFormViewModel jobSeekerForm)
+        public JsonResult RecruiterRegister(RecruiterRegisterFormViewModel recruiterForm)
         {
-            var jobSeeker = Mapper.Map<JobSeekerRegisterFormViewModel, User>(jobSeekerForm);
-            string message = userService.RegisterJobSeeker(jobSeeker);
-            return Json(message);
+            StandardResponse response = new StandardResponse();
+            try
+            {
+                var user = Mapper.Map<RecruiterRegisterFormViewModel, User>(recruiterForm);
+                var company = Mapper.Map<RecruiterRegisterFormViewModel, Company>(recruiterForm);
+                userService.RegisterRecruiter(user, company);
+            }
+            catch (Exception ex)
+            {
+                response.Status = 1;
+                response.Message = ex.Message;
+            }
+            
+            return Json(response);
         }
 
         public ActionResult Login()
         {
-            return View();
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginFormViewModel loginForm)
+        {
+            return PartialView();
         }
     }
 }

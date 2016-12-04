@@ -175,7 +175,9 @@
                     ID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
                     Name = "KMS",
                     Location = "HoChiMinh",
-                    Address = "123 Pham Phu Thu"
+                    Address = "123 Pham Phu Thu",
+                    Type = "Outsourcing",
+                    Size = "Big 300+"
                 }
                 );
         }

@@ -12,5 +12,7 @@ namespace ITJobSeeker.Service.ServiceInterfaces
         string AddJobSeeker(User jobSeeker);
         void Save();
         string RegisterJobSeeker(User jobSeeker);
+
+        void RegisterRecruiter(User Recruiter, Company company);
     }
 }

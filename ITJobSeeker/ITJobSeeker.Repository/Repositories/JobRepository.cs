@@ -35,14 +35,7 @@ namespace ITJobSeeker.Repository.Repositories
 
         public IEnumerable<Job> GetJobsWithCompany()
         {
-            //var jobs = from job in DbContext.Jobs
-            //           join company in DbContext.Companies
-            //           on job.CompanyID equals company.ID
-            //           select job;
-            //return jobs;
-            //IEnumerable<Job> jobs = DbContext.Jobs.AsEnumerable();
-            //DbContext.Entry(jobs).Reference(i=>i.)
-            return DbContext.Jobs.Include("CompanyID").AsEnumerable();
+            return DbContext.Jobs.AsEnumerable();
         }
     }
 }

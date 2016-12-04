@@ -119,40 +119,9 @@
                         </form>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <form role="form" class="form-horizontal">
-                            <div class="form-group">
-                                <label for="txtLocation" class="col-sm-5 control-label">
-                                    Location
-                                </label>
-                                <div class="col-sm-7">
-                                    <select class="form-control" id="ddlLocation" />
-                                    <option>Hồ Chí Minh</option>
-                                    <option>Đà Nẵng</option>
-                                    <option>Hà Nội</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-sm-6">
-                        <form role="form" class="form-horizontal">
-                            <div class="form-group">
-                                <label for="txtAddress" class="col-sm-5 control-label">
-                                    Address (*)
-                                </label>
-                                <div class="col-sm-7">
-                                    <input type="email" class="form-control" id="txtAddress" />
-                                    <br>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
                 <br />
                 <div class="modal-footer">
-                    <button type="button" id="btnSubmit" onclick="myFunction()" class="btn btn-info">Register</button>
+                    <button type="button" id="btnSubmit" onclick="registerJobSeeker()" class="btn btn-info">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
@@ -161,7 +130,7 @@
     </div>
 </div>
 <script>
-    function myFunction() {
+    function registerJobSeeker() {
         var txtUserName = $("#txtUserName").val();
         var txtPassword = $("#txtPassword").val();
         var txtConfirmPassword = $("#txtConfirmPassword").val();
@@ -169,13 +138,11 @@
         var txtLastName = $("#txtLastName").val();
         var txtEmail = $("#txtEmail").val();
         var txtPhone = $("#txtPhone").val();
-        var ddlLocation = $("#ddlLocation").val();
-        var txtAddress = $("#txtAddress").val();
         var isMale = $("#rdoMale").prop("checked");
         var jobSeeker = {
             UserName: txtUserName, FirstName: txtFirstName, LastName: txtLastName,
             Password: txtPassword, ConfirmPassword: txtConfirmPassword, Email: txtEmail,
-            Phone: txtPhone, Location: ddlLocation, Address: txtAddress, IsMale: isMale
+            Phone: txtPhone, IsMale: isMale
         }
         $.ajax({
             type: "POST",
@@ -197,18 +164,5 @@
             alert(data);
             alert('error');
         }
-        //console.log($("#txtUserName").val());
-        //console.log($("#txtPassword").val());
-        //console.log($("#txtConfirmPassword").val());
-        //console.log($("#txtFirstName").val());
-        //console.log($("#txtLastName").val());
-        //console.log($("#txtEmail").val());
-        //console.log($("#txtPhone").val());
-        //console.log($("#ddlLocation").val());
-        //console.log($("#txtAddress").val());
-        //console.log($("#rdoMale").prop("checked"));
-        //console.log($("#rdoFemale").val());
-        
-        //var data = { UserName : }
     }
 </script>

@@ -11,4 +11,3 @@ D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\bin\Debug\ITJobSeeker.Mode
 D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\bin\Debug\ITJobSeeker.Model.pdb
 D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.dll
 D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.pdb
-D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.csprojResolveAssemblyReference.cache

@@ -18,5 +18,9 @@ namespace ITJobSeeker.Service.ServiceInterfaces
         IEnumerable<Job> GetJobsByRecruiter(Guid RecruiterID);
 
         void EditJob(Job job);
+
+        void SaveJob();
+
+        void DeleteJob(Job job);
     }
 }

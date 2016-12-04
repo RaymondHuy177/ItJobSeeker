@@ -66,5 +66,16 @@ namespace ITJobSeeker.Service.ServiceImpl
             editJob.Salary = job.Salary;
             unitOfWork.Commit();
         }
+
+        public void SaveJob()
+        {
+            unitOfWork.Commit();
+        }
+
+        public void DeleteJob(Job job)
+        {
+            jobRepository.Delete(job);
+            unitOfWork.Commit();
+        }
     }
 }

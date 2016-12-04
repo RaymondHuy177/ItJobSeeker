@@ -15,13 +15,22 @@ namespace ITJobSeeker.Service.ServiceImpl
     {
         private readonly IUserRepository userRepository;
         private readonly IUnitOfWork unitOfWork;
+        private readonly ICompanyRepository companyRepository;
         private readonly IConstraintService constraintService;
+        private readonly IRoleRepository roleRepository;
 
-        public UserService(IUserRepository _userRepository, IUnitOfWork _unitOfWork, IConstraintService _constraintService)
+        public UserService(
+            IUserRepository _userRepository,
+            ICompanyRepository _companyRepository,
+            IRoleRepository _roleRepository,
+            IUnitOfWork _unitOfWork, 
+            IConstraintService _constraintService)
         {
-            this.userRepository = _userRepository;
-            this.unitOfWork = _unitOfWork;
-            this.constraintService = _constraintService;
+            roleRepository = _roleRepository;
+            companyRepository = _companyRepository;
+            userRepository = _userRepository;
+            unitOfWork = _unitOfWork;
+            constraintService = _constraintService;
         }
 
         public string AddJobSeeker(User jobSeeker)
@@ -49,6 +58,15 @@ namespace ITJobSeeker.Service.ServiceImpl
                 return message;
             Save();
             return ActionStatus.Success;
+        }
+
+        public void RegisterRecruiter(User Recruiter, Company company)
+        {
+            Recruiter.AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411");
+            Recruiter.RoleID = roleRepository.Get(r => r.Name == "Recruiter").ID;
+            userRepository.Add(Recruiter);
+            companyRepository.Add(company);
+            unitOfWork.Commit();
         }
     }
 }
