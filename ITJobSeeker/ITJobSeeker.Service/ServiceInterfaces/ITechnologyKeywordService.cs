@@ -11,6 +11,8 @@ namespace ITJobSeeker.Service.ServiceInterfaces
     {
         IEnumerable<TechnologyKeyword> GetTechnologyKeywords(string name = null);
 
+        IEnumerable<TechnologyKeyword> GetAllKeywords();
+
         TechnologyKeyword GetTechnologyKeyWord(Guid id);
 
         TechnologyKeyword GetTechnologyKeyword(string name);

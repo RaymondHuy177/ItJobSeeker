@@ -27,11 +27,12 @@ namespace ITJobSeeker.Web.App_Start
             builder.RegisterType<JobService>().As<IJobService>().InstancePerRequest();
             builder.RegisterType<UserService>().As<IUserService>().InstancePerRequest();
             builder.RegisterType<ConstraintService>().As<IConstraintService>().InstancePerRequest();
+            builder.RegisterType<TechnologyKeywordService>().As<ITechnologyKeywordService>().InstancePerRequest();
 
             builder.RegisterType<JobRepository>().As<IJobRepository>().InstancePerRequest();
             builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>().InstancePerRequest();
-
+            builder.RegisterType<TechnologyKeywordRepository>().As<ITechnologyKeywordRepository>().InstancePerRequest();
 
             IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

@@ -40,6 +40,7 @@
             InsertInitialUser(context);
             InsertInitialCompany(context);
             InsertInitialJob(context);
+            InsertInitialTechKeyword(context);
         }
         private void InsertInitialUser(ItJobSeekerEntities context)
         {
@@ -52,8 +53,8 @@
                     FirstName = "Nguyen",
                     LastName = "Khang",
                     Password = "password",
-                    Location= "HoChiMinh",
-                    Address = "123 Pham Phu Thu",
+                    //Location= "HoChiMinh",
+                    //Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
                     AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"),
@@ -67,8 +68,8 @@
                     FirstName = "Quan",
                     LastName = "Mai",
                     Password = "password2",
-                    Location = "HoChiMinh",
-                    Address = "123 Pham Phu Thu",
+                    //Location = "HoChiMinh",
+                    //Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
                     AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"),
@@ -99,6 +100,38 @@
                 );
 
         }
+
+        private void InsertInitialTechKeyword(ItJobSeekerEntities context)
+        {
+
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "MVC" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "ASP.NET" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "Linux" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "C++" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "C#" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "PHP" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "UI-UX" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "Java" }
+                );
+            context.TechnologyKeywords.Add(
+                new Model.Models.TechnologyKeyword { ID = Guid.NewGuid(), Name = "J2EE" }
+                );
+        }
         private void InsertInitialJob(ItJobSeekerEntities context)
         {
             context.Jobs.AddOrUpdate(
@@ -113,7 +146,6 @@
                     SecondTechStack = "ASP.NET",
                     ThirdTechStack = "Java",
                     Requirement = "Requirement",
-                    Location = "HoChiMinh",
                     Name = "7 Software Engineer",
                     Salary = "Negotiable"
                 },
@@ -128,7 +160,6 @@
                     SecondTechStack = "UI-UX",
                     ThirdTechStack = "Java",
                     Requirement = "Requirement2",
-                    Location = "HoChiMinh",
                     Salary = "Negotiable",
                     Name = "7 Java Software Engineer"
                 }
@@ -140,7 +171,9 @@
                 new Company
                 {
                     ID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
-                    Name = "KMS"
+                    Name = "KMS",
+                    Location = "HoChiMinh",
+                    Address = "123 Pham Phu Thu"
                 }
                 );
         }

@@ -1,0 +1,456 @@
+﻿
+@{
+    Layout = null;
+}
+@model ITJobSeeker.Web.ViewModels.FormCreateJobViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateJob</title>
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="~/assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/assets/vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.css" />
+
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/select2/css/select2.css" />
+    <link rel="stylesheet" href="~/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="~/assets/stylesheets/theme.css" />
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="~/assets/stylesheets/skins/default.css" />
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="~/assets/stylesheets/theme-custom.css">
+    <link rel="stylesheet" href="~/assets/vendor/summernote/summernote.css" />
+    <link rel="stylesheet" href="~/assets/vendor/codemirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="~/assets/vendor/codemirror/theme/monokai.css" />
+    <!-- Head Libs -->
+    <script src="~/assets/vendor/modernizr/modernizr.js"></script>
+    <script src="~/Scripts/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <section class="body">
+
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="../" class="logo">
+                    <img src="~/assets/images/logo.png" height="35" alt="Porto Admin" />
+                </a>
+                <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+
+            <!-- start: search & user box -->
+            <div class="header-right">
+
+                <span class="separator"></span>
+
+                <div id="userbox" class="userbox">
+                    <a href="#" data-toggle="dropdown">
+                        <figure class="profile-picture">
+                            <img src="~/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="~/assets/images/!logged-user.jpg" />
+                        </figure>
+                        <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+                            <span class="name">John Doe Junior</span>
+                            <span class="role">administrator</span>
+                        </div>
+
+                        <i class="fa custom-caret"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <ul class="list-unstyled">
+                            <li class="divider"></li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" onclick="logout()"><i class="fa fa-power-off"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end: search & user box -->
+        </header>
+        <!-- end: header -->
+
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+            <aside id="sidebar-left" class="sidebar-left">
+
+                <div class="sidebar-header">
+                    <div class="sidebar-title">
+                        Navigation
+                    </div>
+                    <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+
+                <div class="nano">
+                    <div class="nano-content">
+                        <nav id="menu" class="nav-main" role="navigation">
+                            <ul class="nav nav-main">
+                                <li>
+                                    <a href="index.html">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-columns" aria-hidden="true"></i>
+                                        <span>Account Management</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="@Url.Action("AccountGridView", "AccountManagement")">
+                                                User GridView
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("CreateUser", "AccountManagement")">
+                                                Register User
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-copy" aria-hidden="true"></i>
+                                        <span>Food Management</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="@Url.Action("GridFood", "FoodManagement")">
+                                                Food GridView
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("CreateFood", "FoodManagement")">
+                                                Add Food
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                                        <span>Order Management</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="ui-elements-typography.html">
+                                                Typography
+                                            </a>
+                                        </li>
+                                        <li class="nav-parent">
+                                            <a>
+                                                Icons
+                                            </a>
+                                            <ul class="nav nav-children">
+                                                <li>
+                                                    <a href="ui-elements-icons-elusive.html">
+                                                        Elusive
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-font-awesome.html">
+                                                        Font Awesome
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-glyphicons.html">
+                                                        Glyphicons
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-line-icons.html">
+                                                        Line Icons
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-meteocons.html">
+                                                        Meteocons
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="ui-elements-extra.html">
+                                                Extra
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+                        <hr class="separator" />
+
+                    </div>
+
+                    <script>
+							// Preserve Scroll Position
+							if (typeof localStorage !== 'undefined') {
+								if (localStorage.getItem('sidebar-left-position') !== null) {
+									var initialPosition = localStorage.getItem('sidebar-left-position'),
+										sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+									sidebarLeft.scrollTop = initialPosition;
+								}
+							}
+                    </script>
+
+                </div>
+
+            </aside>
+            <!-- end: sidebar -->
+
+            <section role="main" class="content-body">
+                <header class="page-header">
+                    <h2>Basic Forms</h2>
+
+                    <div class="right-wrapper pull-right">
+                        <ol class="breadcrumbs">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li><span>Forms</span></li>
+                            <li><span>Basic</span></li>
+                        </ol>
+
+                        <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </header>
+
+                <!-- start: page -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                <div class="panel-actions">
+                                    <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                                    <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                                </div>
+
+                                <h2 class="panel-title">Form Elements</h2>
+                            </header>
+                            <div class="panel-body">
+                                <form class="form-horizontal form-bordered">
+                                    <div class="validation-message" id="message-summary">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="inputDefault">Job Title</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="txtName">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="inputDefault">Salary</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="txtSalary">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Default Datepicker</label>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                                <input type="text" data-plugin-datepicker class="form-control" id="txtExpiredDate">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="inputSuccess">First Technology Required</label>
+                                        <div class="col-md-6">
+                                            <select data-plugin-selectTwo class="form-control populate" id="ddlFirstTechStackChosen">
+                                                @foreach (var keyword in Model.TechStackDropDownList)
+                                                {
+                                                    <option value="@keyword.Value">@keyword.Value</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="inputSuccess">Second Technology Required</label>
+                                        <div class="col-md-6">
+                                            <select data-plugin-selectTwo class="form-control populate" id="ddlSecondTechStackChosen">
+                                                @foreach (var keyword in Model.TechStackDropDownList)
+                                                {
+                                                    <option value="@keyword.Value">@keyword.Value</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="inputSuccess">Third Technology Required</label>
+                                        <div class="col-md-6">
+                                            <select data-plugin-selectTwo class="form-control populate" id="ddlThirdTechStackChosen">
+                                                @foreach (var keyword in Model.TechStackDropDownList)
+                                                {
+                                                    <option value="@keyword.Value">@keyword.Value</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Description</label>
+                                        <div class="col-md-9">
+                                            <div id="txtDescription"><p>Your Description</p></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Requirement</label>
+                                        <div class="col-md-9">
+                                            <div id="txtRequirement"><p>Your Requirement</p></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Benefits</label>
+                                        <div class="col-md-9">
+                                            <div id="txtBenefit"><p>Your Benefit</p></div>
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <footer class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-sm-9 col-sm-offset-3">
+                                                <button class="mb-xs mt-xs mr-xs btn btn-lg btn-primary" onclick="AddJob()" type="button">Submit</button>
+                                                <button type="reset" class="mb-xs mt-xs mr-xs btn btn-lg btn-primary">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </form>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div>
+
+                <!-- end: page -->
+            </section>
+        </div>
+
+    </section>
+    <div class="modal fade" id="modalMessage" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Message</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="message-body"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+<script src="~/assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="~/assets/vendor/nanoscroller/nanoscroller.js"></script>
+<script src="~/assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+<script src="~/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<!-- Specific Page Vendor -->
+<script src="~/assets/vendor/select2/js/select2.js"></script>
+<script src="~/assets/vendor/summernote/summernote.js"></script>
+<script src="~/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
+<script src="~/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+
+<!-- Theme Base, Components and Settings -->
+<script src="~/assets/javascripts/theme.js"></script>
+<!-- Theme Custom -->
+<script src="~/assets/javascripts/theme.custom.js"></script>
+
+<!-- Theme Initialization Files -->
+<script src="~/assets/javascripts/theme.init.js"></script>
+
+<!-- Examples -->
+<script src="~/assets/javascripts/tables/examples.datatables.editable.js"></script>
+<script src="~/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+<script>
+    $(function () {
+        $('#txtDescription').summernote({
+            height: 150
+        });
+        $('#txtRequirement').summernote({
+            height: 150
+        });
+        $('#txtBenefit').summernote({
+            height: 150
+        });
+    })
+    function AddJob() {
+        var job = {
+            Name: $('#txtName').val(),
+            Description: $('#txtDescription').summernote('code'),
+            Requirement: $('#txtRequirement').summernote('code'),
+            Benefits: $('#txtBenefit').summernote('code'),
+            Salary: $('#txtSalary').val(),
+            FirstTechStack: $('#ddlFirstTechStackChosen :selected').val(),
+            SecondTechStack: $('#ddlSecondTechStackChosen :selected').val(),
+            ThirdTechStack: $('#ddlThirdTechStackChosen :selected').val(),
+            ExpiredDate: $('#txtExpiredDate').val(),
+        }
+        console.log(job);
+        $.ajax({
+            type: "POST",
+            url: '/JobManagement/CreateJob',
+            data: JSON.stringify({ formVM: job }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                if (data.Status == 0) {
+                    $('#message-body').text('Register Successfully');
+                    $('#modalMessage').modal("show");
+                    //window.location.href = '@Url.Action("AccountGridView", "AccountManagement")';
+                }
+                else {
+                    $('#message-summary').html(
+                        "<ul style='display:block'>" +
+                        "<li><label class='error' style='display: inline-block'>" + data.Message + "</label></li></ul>");
+                }
+            },
+            error: function (data, status) {
+                alert(data);
+            }
+        });
+        return false;
+    }
+</script>
+

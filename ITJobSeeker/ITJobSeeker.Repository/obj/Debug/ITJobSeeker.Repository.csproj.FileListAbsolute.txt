@@ -26,3 +26,17 @@ D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Reposit
 D:\ComputerScience\TTCNPM\SourceCode\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csproj.GenerateResource.Cache
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.Migrations.first.resources
 D:\Tutorial\TTCNPM\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csproj.GenerateResource.Cache
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.dll.config
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.dll
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Repository.pdb
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.dll
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Model.dll
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\ITJobSeeker.Model.pdb
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.xml
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csprojResolveAssemblyReference.cache
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.dll
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.pdb
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.Migrations.first.resources
+D:\Projects\ItJobSeeker\ITJobSeeker\ITJobSeeker.Repository\obj\Debug\ITJobSeeker.Repository.csproj.GenerateResource.Cache

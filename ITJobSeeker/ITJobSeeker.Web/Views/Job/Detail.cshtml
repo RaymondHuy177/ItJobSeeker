@@ -237,14 +237,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <hr>
                                 <div class="r2">
                                     <h1 class="title-descrip">Mô Tả Công Việc</h1>
-                                    <p>@Model.JobDescription</p>
+                                    <p>@Html.Raw(@Model.JobDescription)</p>
                                     <br>
                                     <p>* Benefit :</p>
                                     <ul class="list-benefits" style="list-style-type:disc">
-                                        @Model.JobBenefit
+                                        @Html.Raw(@Model.JobBenefit)
                                     </ul>
                                     <h1 class="title-descrip">Yêu Cầu Công Việc</h1>
-                                    @Model.JobRequirement
+                                    @Html.Raw(@Model.JobRequirement)
                                 </div>
                             </div>
                         </div>

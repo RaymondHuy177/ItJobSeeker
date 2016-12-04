@@ -12,5 +12,7 @@ namespace ITJobSeeker.Service.ServiceInterfaces
         IEnumerable<Job> GetJobsByPage(int page = 1);
 
         Job GetDetailJob(Guid id);
+
+        void AddJob(Job job);
     }
 }

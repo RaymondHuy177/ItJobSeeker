@@ -40,5 +40,11 @@ namespace ITJobSeeker.Service.ServiceImpl
             job.Comapny = company;
             return job;
         }
+
+        public void AddJob(Job job)
+        {
+            jobRepository.Add(job);
+            unitOfWork.Commit();
+        }
     }
 }

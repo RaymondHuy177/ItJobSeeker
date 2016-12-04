@@ -21,10 +21,6 @@ namespace ITJobSeeker.Service.ServiceImpl
                 return "FirstName can not be null";
             else if (String.IsNullOrWhiteSpace(user.LastName))
                 return "LastName can not be null";
-            else if (String.IsNullOrWhiteSpace(user.Location))
-                return "Location can not be null";
-            else if (String.IsNullOrWhiteSpace(user.Address))
-                return "Address can not be null";
             return ActionStatus.Success;
         }
     }

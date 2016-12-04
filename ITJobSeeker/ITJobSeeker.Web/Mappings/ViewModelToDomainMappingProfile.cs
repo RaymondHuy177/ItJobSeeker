@@ -22,11 +22,17 @@ namespace ITJobSeeker.Web.Mappings
                 .ForMember(u => u.LastName, map => map.MapFrom(vm => vm.LastName))
                 .ForMember(u => u.FirstName, map => map.MapFrom(vm => vm.FirstName))
                 .ForMember(u => u.Password, map => map.MapFrom(vm => vm.Password))
-                .ForMember(u => u.Location, map => map.MapFrom(vm => vm.Location))
-                .ForMember(u => u.Address, map => map.MapFrom(vm => vm.Address))
                 .ForMember(u => u.Email, map => map.MapFrom(vm => vm.Email))
                 .ForMember(u => u.IsMale, map => map.MapFrom(vm => vm.IsMale))
                 .ForMember(u => u.Telephone, map => map.MapFrom(vm => vm.Phone));
+
+            Mapper.CreateMap<FormCreateJobViewModel, Job>()
+                .ForMember(j => j.Name, map => map.MapFrom(vm => vm.Name))
+                .ForMember(j => j.Requirement, map => map.MapFrom(vm => vm.Requirement))
+                .ForMember(j => j.Salary, map => map.MapFrom(vm => vm.Salary))
+                .ForMember(j => j.SecondTechStack, map => map.MapFrom(vm => vm.SecondTechStack))
+                .ForMember(j => j.ThirdTechStack, map => map.MapFrom(vm => vm.ThirdTechStack))
+                .ForMember(j => j.FirstTechStack, map => map.MapFrom(vm => vm.FirstTechStack));
         }
     }
 }

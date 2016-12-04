@@ -12,6 +12,7 @@ namespace ITJobSeeker.Model.Models
     {
         public Job()
         {
+            ID = Guid.NewGuid();
             IsActive = false;
             PostedDate = DateTime.Now;
         }
@@ -21,7 +22,7 @@ namespace ITJobSeeker.Model.Models
 
         public DateTime PostedDate { get; set; }
 
-        public string Location { get; set; }
+        public DateTime ExpiredDate { get; set; }
 
         [Required]
         public string Name { get; set; }

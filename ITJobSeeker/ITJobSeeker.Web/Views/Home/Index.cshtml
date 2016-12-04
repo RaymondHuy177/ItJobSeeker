@@ -49,8 +49,8 @@
                     </div>
                     <div class="col-sm-8 row_1">
                         <h4><a href="@Url.Action("Detail", "Job", new {defaultUrl = "asd", id = item.ID }, null)">@item.Name</a></h4>
-                        <h6>@item.Location<span class="dot"></span></h6>
-                        <p>@item.Description </p>
+                        <h6><span class="dot"></span></h6>
+                        <p>@Html.Raw(@item.Description) </p>
 
                     </div>
                     <div class="clearfix"> </div>
@@ -66,8 +66,8 @@
                     </div>
                     <div class="col-sm-8 row_1">
                         <h4><a href="@Url.Action("Detail", "Job", new { id = item.ID }, null)">@item.Name</a></h4>
-                        <h6>@item.Location<span class="dot"></span></h6>
-                        <p>@item.Description </p>
+                        <h6><span class="dot"></span></h6>
+                        <p>@Html.Raw(@item.Description) </p>
 
                     </div>
                     <div class="clearfix"> </div>

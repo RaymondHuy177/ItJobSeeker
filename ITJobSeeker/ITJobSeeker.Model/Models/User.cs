@@ -29,12 +29,6 @@ namespace ITJobSeeker.Model.Models
         [Required]
         public string Password { get; set; }
 
-        [Required]
-        public string Address { get; set; }
-
-        [Required]
-        public string Location { get; set; }
-
         public string Telephone { get; set; }
 
         public bool IsMale { get; set; }

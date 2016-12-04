@@ -51,7 +51,7 @@ namespace ITJobSeeker.Web.ViewModels
             CompanySize = "Start up 1-10";
             CompanyNation = "VietNam";
             CompanyType = "Product";
-            Location = job.Location;
+            Location = company.Location;
         }
     }
 }

@@ -21,6 +21,11 @@ namespace ITJobSeeker.Service.ServiceImpl
             this.unitOfWork = _unitOfWork;
         }
 
+        public IEnumerable<TechnologyKeyword> GetAllKeywords()
+        {
+            return techkeywordsRepository.GetAll();
+        }
+
         public TechnologyKeyword GetTechnologyKeyword(string name)
         {
             var techKeyword = techkeywordsRepository.GetKeywordDetailByName(name);
