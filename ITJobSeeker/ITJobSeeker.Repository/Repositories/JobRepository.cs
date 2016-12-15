@@ -35,7 +35,17 @@ namespace ITJobSeeker.Repository.Repositories
 
         public IEnumerable<Job> GetJobsWithCompany()
         {
-            return DbContext.Jobs.AsEnumerable();
+            IEnumerable<Job> jobs = DbContext.Jobs.AsEnumerable();
+            IEnumerable<Company> companies = DbContext.Companies.AsEnumerable();
+            foreach (Job job in jobs)
+            {
+                foreach (Company company in companies)
+                {
+                    if (job.CompanyID == company.ID)
+                        job.Comapny = company;
+                }
+            }
+            return jobs;
         }
     }
 }

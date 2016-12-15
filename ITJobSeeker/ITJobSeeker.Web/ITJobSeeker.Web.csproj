@@ -211,7 +211,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\JobController.cs" />
-    <Compile Include="Controllers\JobManagementController.cs" />
     <Compile Include="Controllers\RecruiterController.cs" />
     <Compile Include="Controllers\StandardResponse.cs" />
     <Compile Include="Controllers\UserManagementController.cs" />
@@ -230,6 +229,7 @@
     <Compile Include="ViewModels\JobSeekerRegisterFormViewModel.cs" />
     <Compile Include="ViewModels\LoginFormViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="ViewModels\RecruiterRegisterFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +237,8 @@
     <Content Include="assets\ajax\ajax-treeview-nodes.html" />
     <Content Include="assets\ajax\ui-elements-lightbox-ajax.html" />
     <Content Include="assets\ajax\ui-elements-modals-ajax.html" />
+    <Content Include="assets\images\!logged-user.jpg" />
+    <Content Include="assets\images\logo.png" />
     <Content Include="assets\javascripts\dashboard\examples.dashboard.js" />
     <Content Include="assets\javascripts\extra\examples.ajax.made.easy.js" />
     <Content Include="assets\javascripts\forms\examples.advanced.form.js" />
@@ -548,19 +550,19 @@
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Account\RecruiterRegister.cshtml" />
     <Content Include="Views\Job\Detail.cshtml" />
-    <Content Include="Views\JobManagement\CreateJob.cshtml" />
-    <Content Include="Views\JobManagement\JobRecruiterGridView.cshtml" />
-    <Content Include="Views\JobManagement\EditJob.cshtml" />
+    <Content Include="Views\Recruiter\CreateJob.cshtml" />
+    <Content Include="Views\Recruiter\JobRecruiterGridView.cshtml" />
+    <Content Include="Views\Recruiter\EditJob.cshtml" />
     <Content Include="Views\Admin\AllJobs.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Recruiter\ProfilePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\images\" />
     <Folder Include="assets\vendor\bootstrap-datepicker\locale\" />
     <Folder Include="assets\vendor\codemirror\keymap\" />
     <Folder Include="assets\vendor\codemirror\mode\" />
-    <Folder Include="Views\Recruiter\" />
+    <Folder Include="images\recruiter\" />
     <Folder Include="Views\UserManagement\" />
     <Folder Include="Views\User\" />
   </ItemGroup>

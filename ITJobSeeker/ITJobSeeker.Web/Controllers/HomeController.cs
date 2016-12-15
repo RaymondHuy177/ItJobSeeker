@@ -21,8 +21,11 @@ namespace ITJobSeeker.Web.Controllers
 
         public ActionResult Index(int page = 1)
         {
+            bool hasLogin = false;
+            Account account = (Account)Session["Account"];
+            hasLogin = account != null ? true : false;
             List<Job> jobs = jobService.GetJobsByPage(page).ToList();
-            JobGridViewModel jobVM = new JobGridViewModel(jobs);
+            JobGridViewModel jobVM = new JobGridViewModel(jobs, hasLogin);
             return View(jobVM);
         }
         [ChildActionOnly]

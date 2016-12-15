@@ -274,7 +274,7 @@
 
                                         </td>
                                         <td>@*@item.Comapny.Name*@</td>
-                                        <td><button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("EditJob", "JobManagement", new { jobID = @item.ID})'">Edit</button></td>
+                                        <td><button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("EditJob", "Recruiter", new { jobID = @item.ID})'">Edit</button></td>
                                         <td><button type="button" class="btn btn-danger" onclick="DeleteJob('@item.ID')">Delete</button></td>
                                     </tr>
 

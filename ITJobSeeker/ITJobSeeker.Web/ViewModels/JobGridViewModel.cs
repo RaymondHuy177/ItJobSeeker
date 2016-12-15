@@ -10,8 +10,10 @@ namespace ITJobSeeker.Web.ViewModels
     {
         public IEnumerable<Job> FirstColumnJob;
         public IEnumerable<Job> SecondColumnJob;
-        public JobGridViewModel(IEnumerable<Job> jobs)
+        public bool HasLogin;
+        public JobGridViewModel(IEnumerable<Job> jobs, bool hasLogin = false)
         {
+            HasLogin = hasLogin;
             int paginition = jobs.Count() / 2;
             if (jobs.Count() % 2 == 0)
             {

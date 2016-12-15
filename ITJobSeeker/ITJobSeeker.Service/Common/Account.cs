@@ -13,10 +13,12 @@ namespace ITJobSeeker.Service.Common
         public bool IsRecruiter = false;
         public bool IsJobSeeker = false;
         public string UserName = "";
+        public string ID = "";
         public Account() { }
         public Account(User user)
         {
             UserName = user.UserName;
+            ID = user.ID.ToString();
             HasLoggin = true;
             if (user.Role.Name == "Recruiter")
                 IsRecruiter = true;

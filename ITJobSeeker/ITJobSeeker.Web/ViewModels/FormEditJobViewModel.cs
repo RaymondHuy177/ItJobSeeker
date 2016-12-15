@@ -11,7 +11,7 @@ namespace ITJobSeeker.Web.ViewModels
         public string ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-
+        public string SmallDescription { get; set; }
         public string Requirement { get; set; }
         public string Salary { get; set; }
 
@@ -28,6 +28,7 @@ namespace ITJobSeeker.Web.ViewModels
             ID = job.ID.ToString();
             Name = job.Name;
             Description = job.Description;
+            SmallDescription = job.SmallDescription;
             Requirement = job.Requirement;
             Salary = job.Salary;
             Benefits = job.Benefits;

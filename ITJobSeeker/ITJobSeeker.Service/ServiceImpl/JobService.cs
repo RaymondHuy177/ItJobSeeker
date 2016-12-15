@@ -57,6 +57,7 @@ namespace ITJobSeeker.Service.ServiceImpl
             Job editJob = jobRepository.GetById(job.ID);
             editJob.Benefits = job.Benefits;
             editJob.Description = job.Description;
+            editJob.SmallDescription = job.SmallDescription;
             editJob.FirstTechStack = job.FirstTechStack;
             editJob.SecondTechStack = job.SecondTechStack;
             editJob.ThirdTechStack = job.ThirdTechStack;
@@ -76,6 +77,28 @@ namespace ITJobSeeker.Service.ServiceImpl
         {
             jobRepository.Delete(job);
             unitOfWork.Commit();
+        }
+
+        public List<Job> Filter(string keyword, string location)
+        {
+            IEnumerable<Job> jobs =
+                jobRepository.GetMany(j => j.FirstTechStack.Contains(keyword)
+                                || j.SecondTechStack.Contains(keyword)
+                                || j.ThirdTechStack.Contains(keyword)
+                                || j.Name.Contains(keyword));
+            IEnumerable<Company> companies = companyRepository.GetAll();
+            List<Job> result = new List<Job>();
+            foreach (var job in jobs)
+            {
+                foreach (var company in companies)
+                {
+                    if (company.Location == location)
+                    {
+                        result.Add(job);
+                    }
+                }
+            }
+            return result;
         }
     }
 }

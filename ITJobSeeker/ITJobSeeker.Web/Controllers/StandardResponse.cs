@@ -11,6 +11,10 @@ namespace ITJobSeeker.Web.Controllers
 
         public string Message;
 
+        public string ControllerName;
+
+        public string ActionName;
+
         public StandardResponse()
         {
             Status = 0;

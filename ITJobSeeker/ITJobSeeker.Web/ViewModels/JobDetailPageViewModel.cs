@@ -36,6 +36,16 @@ namespace ITJobSeeker.Web.ViewModels
 
         public string Location;
 
+        public string CompanyAvatar;
+
+        public string FirstPicture;
+
+        public string SecondPicture;
+
+        public string ThirdPicture;
+
+        public bool HasLogin;
+
         public void PrepareViewModel(Job job, Company company)
         {
             JobID = job.ID.ToString();
@@ -48,10 +58,15 @@ namespace ITJobSeeker.Web.ViewModels
             SecondTechStack = job.SecondTechStack;
             ThirdTechStack = job.ThirdTechStack;
             CompanyName = job.Comapny.Name;
-            CompanySize = "Start up 1-10";
-            CompanyNation = "VietNam";
-            CompanyType = "Product";
+            CompanySize = job.Comapny.Size;
+            CompanyNation = "";
+            CompanyType = job.Comapny.Type;
             Location = company.Location;
+            FirstPicture = company.FirstPictureID.ToString();
+            SecondPicture = company.SecondPictureID.ToString();
+            ThirdPicture = company.ThirdPictureID.ToString();
+            CompanyAvatar = company.AvatarID.ToString();
+
         }
     }
 }

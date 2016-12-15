@@ -12,7 +12,9 @@ namespace ITJobSeeker.Model.Models
     {
         public Picture()
         {
+            ID = Guid.NewGuid();
             Users = new List<User>();
+            Name = "aaa";
         }
 
         [Key]

@@ -28,6 +28,9 @@ namespace ITJobSeeker.Model.Models
         public string Name { get; set; }
 
         [Required]
+        public string SmallDescription { get; set; }
+
+        [Required]
         public string Description { get; set; }
 
         [Required]

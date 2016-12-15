@@ -38,8 +38,6 @@ namespace ITJobSeeker.Service.ServiceImpl
             string message = constraintService.ValidateJobSeekerInfo(jobSeeker);
             if (!message.Equals(ActionStatus.Success))
                 return message;
-            if (jobSeeker.AvatarID == null || jobSeeker.AvatarID == new Guid())
-                jobSeeker.AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411");
             jobSeeker.RoleID = new Guid("8fab4cd3-d18a-4926-980f-d4859510fddf");
             jobSeeker.Password = PasswordEncrypt.ConverToMD5(jobSeeker.Password);
             userRepository.Add(jobSeeker);
@@ -62,12 +60,19 @@ namespace ITJobSeeker.Service.ServiceImpl
 
         public void RegisterRecruiter(User Recruiter, Company company)
         {
-            Recruiter.AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411");
             Recruiter.RoleID = roleRepository.Get(r => r.Name == "Recruiter").ID;
             Recruiter.Password = PasswordEncrypt.ConverToMD5(Recruiter.Password);
             userRepository.Add(Recruiter);
             companyRepository.Add(company);
             unitOfWork.Commit();
+        }
+
+        public User GetUserInfo(Guid id)
+        {
+            User user = userRepository.GetById(id);
+            Company company = companyRepository.GetById(id);
+            user.Company = company;
+            return user;
         }
     }
 }

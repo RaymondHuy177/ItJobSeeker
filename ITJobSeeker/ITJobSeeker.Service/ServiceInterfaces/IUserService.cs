@@ -14,5 +14,7 @@ namespace ITJobSeeker.Service.ServiceInterfaces
         string RegisterJobSeeker(User jobSeeker);
 
         void RegisterRecruiter(User Recruiter, Company company);
+
+        User GetUserInfo(Guid id);
     }
 }

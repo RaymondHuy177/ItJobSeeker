@@ -29,12 +29,14 @@ namespace ITJobSeeker.Web.App_Start
             builder.RegisterType<ConstraintService>().As<IConstraintService>().InstancePerRequest();
             builder.RegisterType<TechnologyKeywordService>().As<ITechnologyKeywordService>().InstancePerRequest();
             builder.RegisterType<AuthenticateService>().As<IAuthenticateService>().InstancePerRequest();
+            builder.RegisterType<CompanyService>().As<ICompanyService>().InstancePerRequest();
 
             builder.RegisterType<JobRepository>().As<IJobRepository>().InstancePerRequest();
             builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>().InstancePerRequest();
             builder.RegisterType<TechnologyKeywordRepository>().As<ITechnologyKeywordRepository>().InstancePerRequest();
             builder.RegisterType<RoleRepository>().As<IRoleRepository>().InstancePerRequest();
+            builder.RegisterType<PictureRepository>().As<IPictureRepository>().InstancePerRequest();
 
             IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

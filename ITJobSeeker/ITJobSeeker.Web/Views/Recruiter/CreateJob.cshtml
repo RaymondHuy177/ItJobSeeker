@@ -340,6 +340,13 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="txtSmallDescription">Small Description</label>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control" id="txtSmallDescription"></textarea>
+                                        </div>
+                                    </div>
+
                                     <br />
                                     <footer class="panel-footer">
                                         <div class="row">
@@ -416,7 +423,7 @@
         });
     })
     function Back() {
-        window.location.href = '@Url.Action("JobRecruiterGridView", "JobManagement")';
+        window.location.href = '@Url.Action("JobRecruiterGridView", "Recruiter")';
     }
     function AddJob() {
         var job = {
@@ -429,11 +436,12 @@
             SecondTechStack: $('#ddlSecondTechStackChosen :selected').val(),
             ThirdTechStack: $('#ddlThirdTechStackChosen :selected').val(),
             ExpiredDate: $('#txtExpiredDate').val(),
+            SmallDescription: $('#txtSmallDescription').val()
         }
         console.log(job);
         $.ajax({
             type: "POST",
-            url: '/JobManagement/CreateJob',
+            url: '/Recruiter/CreateJob',
             data: JSON.stringify({ formVM: job }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",

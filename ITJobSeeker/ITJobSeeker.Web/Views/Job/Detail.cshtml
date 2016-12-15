@@ -39,104 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
     <div id="main-container">
         <div id="main-header">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html"><img src="~/images/logo.png" alt="" /></a>
-                    </div>
-                    <!--/.navbar-header-->
-                    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Jobs<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="location.html">Contract Jobs</a></li>
-                                    <li><a href="location.html">Walkin Jobs</a></li>
-                                    <li><a href="location.html">Jobs by Location</a></li>
-                                    <li><a href="location.html">Jobs by Function</a></li>
-                                    <li><a href="location.html">Jobs by Industry</a></li>
-                                    <li><a href="location.html">Jobs by Company</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-column columns-3">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="services.html">Action</a></li>
-                                                <li><a href="services.html">Another action</a></li>
-                                                <li><a href="services.html">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="services.html">Separated link</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="services.html">One more separated link</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="services.html">Action</a></li>
-                                                <li><a href="services.html">Another action</a></li>
-                                                <li><a href="services.html">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="services.html">Separated link</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="services.html">One more separated link</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
-                                                <li><a href="services.html">Action</a></li>
-                                                <li><a href="services.html">Another action</a></li>
-                                                <li><a href="services.html">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="services.html">Separated link</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="services.html">One more separated link</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recruiters<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="login.html">Recruiter Updates</a></li>
-                                    <li><a href="recruiters.html">Recruiters you are following</a></li>
-                                    <li><a href="codes.html">Shortcodes</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="jobs.html">Walk-ins</a></li>
-                                    <li><a href="jobs.html">Bpo Jobs</a></li>
-                                    <li><a href="jobs.html">Teaching Jobs</a></li>
-                                    <li><a href="jobs.html">Diploma Jobs</a></li>
-                                    <li><a href="jobs.html">Tech Support</a></li>
-                                    <li><a href="jobs.html">Finance Jobs</a></li>
-                                    <li><a href="jobs.html">Part time Jobs</a></li>
-                                    <li><a href="jobs.html">Health Care</a></li>
-                                    <li><a href="jobs.html">Hospitality</a></li>
-                                    <li><a href="jobs.html">Internships</a></li>
-                                    <li><a href="jobs.html">Research Jobs</a></li>
-                                    <li><a href="jobs.html">Defence Jobs</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="resume.html">Upload Resume</a></li>
-                        </ul>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <!--/.navbar-collapse-->
-            </nav>
+            @Html.Action("Menu", "Home")
         </div>
         <div class="banner">
             <div id="main-search">
@@ -168,24 +71,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="content-job">
                         <div class="row img-comps hiddenxs">
                             <div class="col-md-4" style="text-align:center;">
-                                <img src="~/images/img1.jpg">
+                                <img src="/images/recruiter/@(Model.FirstPicture).png">
                             </div>
                             <div class="col-md-4" style="text-align:center;">
-                                <img src="~/images/img2.jpg">
+                                <img src="/images/recruiter/@(Model.SecondPicture).png">
                             </div>
                             <div class="col-md-4" style="text-align:center;">
-                                <img src="~/images/img3.jpg">
+                                <img src="/images/recruiter/@(Model.ThirdPicture).png">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4 left">
                                 <div class="fix-blocks hiddenxs1">
                                     <div class="logo">
-                                        <img src="~/images/logo-comp.jpg">
+                                        <img src="/images/recruiter/@(Model.CompanyAvatar).png">
                                     </div>
                                     <div class="descrip-comp">
                                         <h2 id="name"> @Model.CompanyName</h2>
-                                        <p style="margin-bottom:10px;text-transform:uppercase;">Evoable Asia – to be no.1 it software provider in asia</p>
                                         <span class="ele-comp">
                                             <i class="fa fa-cog eles" aria-hidden="true"></i>
                                             @Model.CompanyType
@@ -198,24 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <i class="fa fa-globe eles" aria-hidden="true"></i>
                                             @Model.CompanyNation
                                         </span>
-                                        <div style="text-align:center;padding-top:20px;padding-bottom:30px;">
-                                            <a class="link-red" href="#" style="font-size:20px;">Về chúng tôi</a>
-                                        </div>
                                     </div>
-                                </div>
-                                <div class="logo-comp-xs visible-xs">
-                                    <table>
-                                        <tbody>
-                                            <tr>
-                                                <td style="width:30%;">
-                                                    <img style="width:100%;" src="~/images/logo-comp.jpg">
-                                                </td>
-                                                <td style="font-size:15px;padding-left:15px;">
-                                                    <p>Evoable Asia – to be no.1 it software provider in asia</p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-8 right">
@@ -230,7 +115,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </span>
                                     <span style="display:block;padding-top:10px;">
                                         <i class="fa fa-usd" aria-hidden="true"></i>
-                                        @Model.Salary
+                                        @if (Model.HasLogin)
+                                        { @Model.Salary }
+                                        else
+                                        { <p>Login to view salary</p> }
                                     </span>
                                     <button type="button" class="btn btn-default apply-btn">Ứng Tuyển</button>
                                 </div>
@@ -254,5 +142,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             
         </div>
     </div>
+    @Html.Action("JobSeekerRegister", "Account")
+    @Html.Action("RecruiterRegister", "Account")
+    @Html.Action("Login", "Account")
 </body>
 </html>

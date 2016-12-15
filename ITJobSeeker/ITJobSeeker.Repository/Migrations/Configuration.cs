@@ -52,12 +52,11 @@
                     Email = "example@yahoo.com",
                     FirstName = "Nguyen",
                     LastName = "Khang",
-                    Password = "password",
+                    Password = "202cb962ac59075b964b07152d234b70",
                     //Location= "HoChiMinh",
                     //Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
-                    AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"),
                     RoleID = new Guid("4c06668e-2625-4275-8e87-07f071d0f358")
                 },
                 new Model.Models.User
@@ -67,12 +66,11 @@
                     UserName = "example2",
                     FirstName = "Quan",
                     LastName = "Mai",
-                    Password = "password2",
+                    Password = "202cb962ac59075b964b07152d234b70",
                     //Location = "HoChiMinh",
                     //Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
-                    AvatarID = new Guid("0cee8ce8-5cf5-4d5a-b4e8-8c089cec3411"),
                     RoleID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f")
                 }
                 );
@@ -141,6 +139,7 @@
                     Benefits = "Benefit",
                     CompanyID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
                     Description = "Description",
+                    SmallDescription = "SmallDescription",
                     IsActive = true,
                     FirstTechStack = "MVC",
                     SecondTechStack = "ASP.NET",
@@ -156,6 +155,7 @@
                     Benefits = "Benefit2",
                     CompanyID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
                     Description = "Description2",
+                    SmallDescription = "SmallDescription",
                     IsActive = true,
                     FirstTechStack = "J2EE",
                     SecondTechStack = "UI-UX",
@@ -174,7 +174,7 @@
                 {
                     ID = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837"),
                     Name = "KMS",
-                    Location = "HoChiMinh",
+                    Location = "Hồ Chí Minh",
                     Address = "123 Pham Phu Thu",
                     Type = "Outsourcing",
                     Size = "Big 300+"

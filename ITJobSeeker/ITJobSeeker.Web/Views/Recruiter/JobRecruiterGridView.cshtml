@@ -278,7 +278,7 @@
                                             }
 
                                         </td>
-                                        <td><button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("EditJob", "JobManagement", new { jobID = @item.ID})'">Edit</button></td>
+                                        <td><button type="button" class="btn btn-success" onclick="window.location.href='@Url.Action("EditJob", "Recruiter", new { jobID = @item.ID})'">Edit</button></td>
                                     </tr>
 
                                 }
@@ -335,7 +335,7 @@
 <script src="~/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
 <script>
     function NavigateToCreateUserPage() {
-        window.location.href = '@Url.Action("CreateJob", "JobManagement")';
+        window.location.href = '@Url.Action("CreateJob", "Recruiter")';
     }
 </script>
 

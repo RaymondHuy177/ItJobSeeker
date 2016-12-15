@@ -1,5 +1,5 @@
 ﻿<div class="modal fade" id="loginModal" role="dialog">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
@@ -8,40 +8,39 @@
                 <h4 class="modal-title">Recruiter Register</h4>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <form role="form" class="form-horizontal">
+
+                <form role="form" class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="txtLoginUserName" class="col-sm-5 control-label">
+                                <label for="txtLoginUserName" class="col-sm-3 control-label" style="text-align:right">
                                     Account Name (*)
                                 </label>
-                                <div class="col-sm-7">
+                                <div class="col-sm-9">
                                     <input type="text" class="form-control" id="txtLoginUserName" required />
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <form role="form" class="form-horizontal">
+                    <div class="row">
+                        <div class="col-sm-12">
                             <div class="form-group">
-                                <label for="txtLoginPassword" class="col-sm-5 control-label">
+                                <label for="txtLoginPassword" class="col-sm-3 control-label" style="text-align:right">
                                     Password (*)
                                 </label>
-                                <div class="col-sm-7">
+                                <div class="col-sm-9">
                                     <input type="password" class="form-control" id="txtLoginPassword" required />
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <br />
-                <div class="modal-footer">
-                    <button type="button" id="btnSubmit" onclick="Login()" class="btn btn-info">Login</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                </div>
-            </div>
+                </form>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="button" id="btnSubmit" onclick="Login()" class="btn btn-info">Login</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+</div>
 
         </div>
     </div>
@@ -63,7 +62,7 @@
             dataType: "json",
             success: function (data) {
                 if (data.Status == 0) {
-                    // TODO
+                    window.location.href = window.location.origin + '/' + data.ControllerName + '/' + data.ActionName;
                     $('#loginModal').modal('hide');
                 }
             },

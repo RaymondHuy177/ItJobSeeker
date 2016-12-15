@@ -29,6 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!----font-Awesome----->
     <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
 
+    
     @*@Styles.Render("~/Content/css")*@
     
 
@@ -45,15 +46,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div id="search_form" class="clearfix">
                             <h1 class="centersearch">Start your job search</h1>
                             <p class="centersearch">
-                                <input type="text" class="text" placeholder=" " value="Enter Keyword(s)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Keyword(s)';}">
+                                <input type="text" id="txtKeyword" class="text" placeholder="" value="Enter Keyword(s)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Keyword(s)';}">
                                 <select id="sel1">
-                                    <option class="selop">Ho Chi Minh</option>
+                                    <option class="selop">Hồ Chí Minh</option>
                                     <option class="selop">Ha Noi</option>
                                     <option class="selop">Da Nang</option>
-                                    <option class="selop">...</option>
                                 </select>
                                 <br>
-                                <label class="btn2 btn-2 btn2-1b"><input type="submit" value="Find Jobs"></label>
+                                <label class="btn2 btn-2 btn2-1b"><input type="submit" value="Find Jobs" onclick="findJobs()"></label>
                             </p>
 
 
@@ -81,3 +81,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         @RenderSection("scripts", required: false)
 </body>
 </html>
+<script>
+    function findJobs() {
+        console.log('hello');
+        window.location.href = window.location.origin + '/Job/FindJobs?keyword=' + $('#txtKeyword').val() + '&location=' + $('#sel1 :selected').val();
+        return false;
+    }
+</script>

@@ -75,6 +75,16 @@ namespace ITJobSeeker.Web.Controllers
                 {
                     Account acc = authenticateService.CreateAccountSession(user);
                     Session["Account"] = acc;
+                    if (acc.IsRecruiter)
+                    {
+                        response.ControllerName = "Recruiter";
+                        response.ActionName = "JobRecruiterGridView";
+                    }
+                    else if (acc.IsJobSeeker)
+                    {
+                        response.ControllerName = "Home";
+                        response.ActionName = "Index";
+                    }
                 }
                 else
                 {
@@ -87,12 +97,14 @@ namespace ITJobSeeker.Web.Controllers
                 response.Status = 1;
                 response.Message = ex.Message;
             }
+            
             return Json(response);
         }
 
         public JsonResult Logout()
         {
             StandardResponse response = new StandardResponse();
+            Session["Account"] = null;
             return Json(response);
         }
     }

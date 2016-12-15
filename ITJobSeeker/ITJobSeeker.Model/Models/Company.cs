@@ -32,6 +32,14 @@ namespace ITJobSeeker.Model.Models
 
         public virtual User User { get; set; }
 
+        public Guid? FirstPictureID { get; set; }
+
+        public Guid? SecondPictureID { get; set; }
+
+        public Guid? ThirdPictureID { get; set; }
+
+        public Guid? AvatarID { get; set; }
+
         public virtual ICollection<Job> Jobs { get; set; }
         
     }

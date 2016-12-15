@@ -424,7 +424,7 @@
         });
     })
     function Back() {
-        window.location.href = '@Url.Action("JobRecruiterGridView", "JobManagement")';
+        window.location.href = '@Url.Action("JobRecruiterGridView", "Recruiter")';
     }
     function EditJob() {
         var job = {
@@ -441,7 +441,7 @@
         console.log(job);
         $.ajax({
             type: "POST",
-            url: '/JobManagement/EditJob',
+            url: '/Recruiter/EditJob',
             data: JSON.stringify({ formVM: job }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",

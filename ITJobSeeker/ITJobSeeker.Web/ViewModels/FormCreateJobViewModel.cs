@@ -10,8 +10,9 @@ namespace ITJobSeeker.Web.ViewModels
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        
+        public string SmallDescription { get; set; }
         public string Requirement { get; set; }
+
         public DateTime ExpiredDate { get; set; }
         public string Salary { get; set; }
         

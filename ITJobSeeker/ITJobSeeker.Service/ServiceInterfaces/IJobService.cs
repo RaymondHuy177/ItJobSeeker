@@ -22,5 +22,7 @@ namespace ITJobSeeker.Service.ServiceInterfaces
         void SaveJob();
 
         void DeleteJob(Job job);
+
+        List<Job> Filter(string keyword, string location);
     }
 }

@@ -31,6 +31,7 @@ namespace ITJobSeeker.Web.Mappings
                 .ForMember(j => j.Requirement, map => map.MapFrom(vm => vm.Requirement))
                 .ForMember(j => j.Benefits, map => map.MapFrom(vm => vm.Benefits))
                 .ForMember(j => j.Description, map => map.MapFrom(vm => vm.Description))
+                .ForMember(j => j.SmallDescription, map => map.MapFrom(vm => vm.SmallDescription))
                 .ForMember(j => j.Salary, map => map.MapFrom(vm => vm.Salary))
                 .ForMember(j => j.SecondTechStack, map => map.MapFrom(vm => vm.SecondTechStack))
                 .ForMember(j => j.ThirdTechStack, map => map.MapFrom(vm => vm.ThirdTechStack))
@@ -42,6 +43,7 @@ namespace ITJobSeeker.Web.Mappings
                 .ForMember(j => j.Requirement, map => map.MapFrom(vm => vm.Requirement))
                 .ForMember(j => j.Benefits, map => map.MapFrom(vm => vm.Benefits))
                 .ForMember(j => j.Description, map => map.MapFrom(vm => vm.Description))
+                .ForMember(j => j.SmallDescription, map => map.MapFrom(vm => vm.SmallDescription))
                 .ForMember(j => j.Salary, map => map.MapFrom(vm => vm.Salary))
                 .ForMember(j => j.SecondTechStack, map => map.MapFrom(vm => vm.SecondTechStack))
                 .ForMember(j => j.ThirdTechStack, map => map.MapFrom(vm => vm.ThirdTechStack))
@@ -65,6 +67,13 @@ namespace ITJobSeeker.Web.Mappings
                 .ForMember(c => c.Type, map => map.MapFrom(vm => vm.CompanyType))
                 .ForMember(c => c.Size, map => map.MapFrom(vm => vm.CompanySize));
 
+            Mapper.CreateMap<ProfilePageViewModel, Company>()
+                .ForMember(u => u.ID, map => map.MapFrom(vm => vm.ID))
+                .ForMember(c => c.Name, map => map.MapFrom(vm => vm.CompanyName))
+                .ForMember(c => c.Address, map => map.MapFrom(vm => vm.Address))
+                .ForMember(c => c.Location, map => map.MapFrom(vm => vm.Location))
+                .ForMember(c => c.Type, map => map.MapFrom(vm => vm.Type))
+                .ForMember(c => c.Size, map => map.MapFrom(vm => vm.Size));
         }
     }
 }
