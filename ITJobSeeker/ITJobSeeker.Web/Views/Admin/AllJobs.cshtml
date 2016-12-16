@@ -62,8 +62,8 @@
                             <img src="~/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="~/assets/images/!logged-user.jpg" />
                         </figure>
                         <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                            <span class="name">John Doe Junior</span>
-                            <span class="role">administrator</span>
+                            <span class="name">Admin</span>
+                            <span class="role"></span>
                         </div>
 
                         <i class="fa custom-caret"></i>
@@ -72,9 +72,6 @@
                     <div class="dropdown-menu">
                         <ul class="list-unstyled">
                             <li class="divider"></li>
-                            <li>
-                                <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
-                            </li>
                             <li>
                                 <a role="menuitem" tabindex="-1" onclick="logout()"><i class="fa fa-power-off"></i> Logout</a>
                             </li>
@@ -116,65 +113,28 @@
                                     </a>
                                     <ul class="nav nav-children">
                                         <li>
-                                            <a href="@Url.Action("AccountGridView", "AccountManagement")">
-                                                User GridView
+                                            <a href="@Url.Action("JobSeekers", "UserManagement")">
+                                                JobSeekers GridView
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action("CreateUser", "AccountManagement")">
-                                                Register User
+                                            <a href="@Url.Action("Recruiters", "UserManagement")">
+                                                Recruiters GridView
                                             </a>
                                         </li>
 
                                     </ul>
                                 </li>
 
-                                <li class="nav-parent">
+                                <li class="nav-parent nav-expanded nav-active">
                                     <a>
                                         <i class="fa fa-tasks" aria-hidden="true"></i>
-                                        <span>Order Management</span>
+                                        <span>Job Management</span>
                                     </a>
                                     <ul class="nav nav-children">
-                                        <li>
+                                        <li class="nav-active">
                                             <a href="ui-elements-typography.html">
-                                                Typography
-                                            </a>
-                                        </li>
-                                        <li class="nav-parent">
-                                            <a>
-                                                Icons
-                                            </a>
-                                            <ul class="nav nav-children">
-                                                <li>
-                                                    <a href="ui-elements-icons-elusive.html">
-                                                        Elusive
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-font-awesome.html">
-                                                        Font Awesome
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-glyphicons.html">
-                                                        Glyphicons
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-line-icons.html">
-                                                        Line Icons
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-meteocons.html">
-                                                        Meteocons
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="ui-elements-extra.html">
-                                                Extra
+                                                All Jobs
                                             </a>
                                         </li>
                                     </ul>
@@ -215,8 +175,6 @@
                                     <i class="fa fa-home"></i>
                                 </a>
                             </li>
-                            <li><span>Forms</span></li>
-                            <li><span>Basic</span></li>
                         </ol>
 
                         <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>

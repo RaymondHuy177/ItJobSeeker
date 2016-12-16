@@ -85,6 +85,11 @@ namespace ITJobSeeker.Web.Controllers
                         response.ControllerName = "Home";
                         response.ActionName = "Index";
                     }
+                    else
+                    {
+                        response.ControllerName = "Admin";
+                        response.ActionName = "AllJobs";
+                    }
                 }
                 else
                 {

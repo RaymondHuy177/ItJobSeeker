@@ -61,8 +61,8 @@
                             <img src="~/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="~/assets/images/!logged-user.jpg" />
                         </figure>
                         <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
-                            <span class="name">John Doe Junior</span>
-                            <span class="role">administrator</span>
+                            <span class="name">Recruiter</span>
+                            <span class="role"></span>
                         </div>
 
                         <i class="fa custom-caret"></i>
@@ -72,7 +72,7 @@
                         <ul class="list-unstyled">
                             <li class="divider"></li>
                             <li>
-                                <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+                                <a role="menuitem" tabindex="-1" href="/Recruiter/ProfilePage"><i class="fa fa-user"></i> My Profile</a>
                             </li>
                             <li>
                                 <a role="menuitem" tabindex="-1" onclick="logout()"><i class="fa fa-power-off"></i> Logout</a>
@@ -111,86 +111,17 @@
                                 <li class="nav-parent">
                                     <a>
                                         <i class="fa fa-columns" aria-hidden="true"></i>
-                                        <span>Account Management</span>
+                                        <span>Job Management</span>
                                     </a>
                                     <ul class="nav nav-children">
                                         <li>
-                                            <a href="@Url.Action(" AccountGridView", "AccountManagement" )">
-                                                User GridView
+                                            <a href="@Url.Action("JobRecruiterGridView", "Recruiter")">
+                                                Jobs GridView
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" CreateUser", "AccountManagement" )">
-                                                Register User
-                                            </a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="nav-parent">
-                                    <a>
-                                        <i class="fa fa-copy" aria-hidden="true"></i>
-                                        <span>Food Management</span>
-                                    </a>
-                                    <ul class="nav nav-children">
-                                        <li>
-                                            <a href="@Url.Action(" GridFood", "FoodManagement" )">
-                                                Food GridView
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.Action(" CreateFood", "FoodManagement" )">
-                                                Add Food
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-parent">
-                                    <a>
-                                        <i class="fa fa-tasks" aria-hidden="true"></i>
-                                        <span>Order Management</span>
-                                    </a>
-                                    <ul class="nav nav-children">
-                                        <li>
-                                            <a href="ui-elements-typography.html">
-                                                Typography
-                                            </a>
-                                        </li>
-                                        <li class="nav-parent">
-                                            <a>
-                                                Icons
-                                            </a>
-                                            <ul class="nav nav-children">
-                                                <li>
-                                                    <a href="ui-elements-icons-elusive.html">
-                                                        Elusive
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-font-awesome.html">
-                                                        Font Awesome
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-glyphicons.html">
-                                                        Glyphicons
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-line-icons.html">
-                                                        Line Icons
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="ui-elements-icons-meteocons.html">
-                                                        Meteocons
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="ui-elements-extra.html">
-                                                Extra
+                                            <a href="@Url.Action("CreateJob", "Recruiter")">
+                                                Create Job
                                             </a>
                                         </li>
                                     </ul>
@@ -222,7 +153,7 @@
 
             <section role="main" class="content-body">
                 <header class="page-header">
-                    <h2>Basic Forms</h2>
+                    <h2>Job Management</h2>
 
                     <div class="right-wrapper pull-right">
                         <ol class="breadcrumbs">
@@ -231,8 +162,6 @@
                                     <i class="fa fa-home"></i>
                                 </a>
                             </li>
-                            <li><span>Forms</span></li>
-                            <li><span>Basic</span></li>
                         </ol>
 
                         <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
@@ -249,7 +178,7 @@
                                     <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
                                 </div>
 
-                                <h2 class="panel-title">Form Elements</h2>
+                                <h2 class="panel-title">Edit Job Form</h2>
                             </header>
                             <div class="panel-body">
                                 <form class="form-horizontal form-bordered">
