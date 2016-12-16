@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ITJobSeeker.Model.Models;
+using ITJobSeeker.Service.ServiceInterfaces;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,19 +11,37 @@ namespace ITJobSeeker.Web.Controllers
 {
     public class UserManagementController : Controller
     {
-        // GET: UserManagement
-        public ActionResult Index()
+        private readonly IUserService userService;
+
+        public UserManagementController(IUserService _userService)
         {
-            return View();
+            userService = _userService;
+        }
+        // GET: UserManagement
+        public ActionResult JobSeekers()
+        {
+            IEnumerable<User> users = userService.GetAllJobSeekerGridView();
+            return View(users);
         }
 
-        public ActionResult ActiveUser(string id)
+        public ActionResult Recruiters()
         {
-            return View();
+            IEnumerable<User> users = userService.GetAllRecruiterGridView();
+            return View(users);
         }
-        public ActionResult DeactiveUser(string id)
+        [HttpPost]
+        public JsonResult ActiveUser(string id)
         {
-            return View();
+            StandardResponse response = new StandardResponse();
+            userService.UpdateActiveStatus(id, true);
+            return Json(response);
+        }
+        [HttpPost]
+        public JsonResult DeActiveUser(string id)
+        {
+            StandardResponse response = new StandardResponse();
+            userService.UpdateActiveStatus(id, false);
+            return Json(response);
         }
     }
 }

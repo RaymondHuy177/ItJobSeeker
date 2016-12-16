@@ -12,6 +12,7 @@ namespace ITJobSeeker.Service.Common
         public bool HasLoggin = false;
         public bool IsRecruiter = false;
         public bool IsJobSeeker = false;
+        public bool IsAdmin = false;
         public string UserName = "";
         public string ID = "";
         public Account() { }
@@ -24,6 +25,8 @@ namespace ITJobSeeker.Service.Common
                 IsRecruiter = true;
             else if (user.Role.Name == "JobSeeker")
                 IsJobSeeker = true;
+            else if (user.Role.Name == "Admin")
+                IsAdmin = true;
         }
     }
 }

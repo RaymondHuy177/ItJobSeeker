@@ -48,15 +48,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div id="search_form" class="clearfix">
                             <h1 class="centersearch">Start your job search</h1>
                             <p class="centersearch">
-                                <input type="text" class="text" placeholder=" " value="Enter Keyword(s)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Keyword(s)';}">
+                                <input type="text" id="txtKeyword" class="text" placeholder="" value="Enter Keyword(s)" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Keyword(s)';}">
                                 <select id="sel1">
-                                    <option class="selop">Ho Chi Minh</option>
+                                    <option class="selop">Hồ Chí Minh</option>
                                     <option class="selop">Ha Noi</option>
                                     <option class="selop">Da Nang</option>
-                                    <option class="selop">...</option>
                                 </select>
                                 <br>
-                                <label class="btn2 btn-2 btn2-1b"><input type="submit" value="Find Jobs"></label>
+                                <label class="btn2 btn-2 btn2-1b"><input type="submit" value="Find Jobs" onclick="findJobs()"></label>
                             </p>
 
 
@@ -67,78 +66,78 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
             </div>
-                <div class="container" id="detail-job">
-                    <div class="content-job">
-                        <div class="row img-comps hiddenxs">
-                            <div class="col-md-4" style="text-align:center;">
-                                <img src="/images/recruiter/@(Model.FirstPicture).png">
-                            </div>
-                            <div class="col-md-4" style="text-align:center;">
-                                <img src="/images/recruiter/@(Model.SecondPicture).png">
-                            </div>
-                            <div class="col-md-4" style="text-align:center;">
-                                <img src="/images/recruiter/@(Model.ThirdPicture).png">
-                            </div>
+            <div class="container" id="detail-job">
+                <div class="content-job">
+                    <div class="row img-comps hiddenxs">
+                        <div class="col-md-4" style="text-align:center;">
+                            <img src="/images/recruiter/@(Model.FirstPicture).png">
                         </div>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4 left">
-                                <div class="fix-blocks hiddenxs1">
-                                    <div class="logo">
-                                        <img src="/images/recruiter/@(Model.CompanyAvatar).png">
-                                    </div>
-                                    <div class="descrip-comp">
-                                        <h2 id="name"> @Model.CompanyName</h2>
-                                        <span class="ele-comp">
-                                            <i class="fa fa-cog eles" aria-hidden="true"></i>
-                                            @Model.CompanyType
-                                        </span>
-                                        <span class="ele-comp">
-                                            <i class="fa fa-users eles" aria-hidden="true"></i>
-                                            @Model.CompanySize
-                                        </span>
-                                        <span class="ele-comp">
-                                            <i class="fa fa-globe eles" aria-hidden="true"></i>
-                                            @Model.CompanyNation
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-sm-8 right">
-                                <div class="r1">
-                                    <h1 class="name-comp">@Model.JobTitle</h1>
-                                    <button type="button" class="btn btn-default tag-pl">@Model.FirstTechStack</button>
-                                    <button type="button" class="btn btn-default tag-pl">@Model.SecondTechStack</button>
-                                    <button type="button" class="btn btn-default tag-pl">@Model.ThirdTechStack</button>
-                                    <span style="display:block;padding-top:10px;">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        @Model.Location
-                                    </span>
-                                    <span style="display:block;padding-top:10px;">
-                                        <i class="fa fa-usd" aria-hidden="true"></i>
-                                        @if (Model.HasLogin)
-                                        { @Model.Salary }
-                                        else
-                                        { <p>Login to view salary</p> }
-                                    </span>
-                                    <button type="button" class="btn btn-default apply-btn">Ứng Tuyển</button>
-                                </div>
-                                <hr>
-                                <div class="r2">
-                                    <h1 class="title-descrip">Mô Tả Công Việc</h1>
-                                    <p>@Html.Raw(@Model.JobDescription)</p>
-                                    <br>
-                                    <p>* Benefit :</p>
-                                    <ul class="list-benefits" style="list-style-type:disc">
-                                        @Html.Raw(@Model.JobBenefit)
-                                    </ul>
-                                    <h1 class="title-descrip">Yêu Cầu Công Việc</h1>
-                                    @Html.Raw(@Model.JobRequirement)
-                                </div>
-                            </div>
+                        <div class="col-md-4" style="text-align:center;">
+                            <img src="/images/recruiter/@(Model.SecondPicture).png">
                         </div>
-                        <hr>
+                        <div class="col-md-4" style="text-align:center;">
+                            <img src="/images/recruiter/@(Model.ThirdPicture).png">
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 left">
+                            <div class="fix-blocks hiddenxs1">
+                                <div class="logo">
+                                    <img src="/images/recruiter/@(Model.CompanyAvatar).png">
+                                </div>
+                                <div class="descrip-comp">
+                                    <h2 id="name"> @Model.CompanyName</h2>
+                                    <span class="ele-comp">
+                                        <i class="fa fa-cog eles" aria-hidden="true"></i>
+                                        @Model.CompanyType
+                                    </span>
+                                    <span class="ele-comp">
+                                        <i class="fa fa-users eles" aria-hidden="true"></i>
+                                        @Model.CompanySize
+                                    </span>
+                                    <span class="ele-comp">
+                                        <i class="fa fa-globe eles" aria-hidden="true"></i>
+                                        @Model.CompanyNation
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-8 right">
+                            <div class="r1">
+                                <h1 class="name-comp">@Model.JobTitle</h1>
+                                <button type="button" class="btn btn-default tag-pl">@Model.FirstTechStack</button>
+                                <button type="button" class="btn btn-default tag-pl">@Model.SecondTechStack</button>
+                                <button type="button" class="btn btn-default tag-pl">@Model.ThirdTechStack</button>
+                                <span style="display:block;padding-top:10px;">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    @Model.Location
+                                </span>
+                                <span style="display:block;padding-top:10px;">
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
+                                    @if (Model.HasLogin)
+                                    { @Model.Salary }
+                                    else
+                                    { <p>Login to view salary</p> }
+                                </span>
+                                <button type="button" class="btn btn-default apply-btn">Ứng Tuyển</button>
+                            </div>
+                            <hr>
+                            <div class="r2">
+                                <h1 class="title-descrip">Mô Tả Công Việc</h1>
+                                <p>@Html.Raw(@Model.JobDescription)</p>
+                                <br>
+                                <p>* Benefit :</p>
+                                <ul class="list-benefits" style="list-style-type:disc">
+                                    @Html.Raw(@Model.JobBenefit)
+                                </ul>
+                                <h1 class="title-descrip">Yêu Cầu Công Việc</h1>
+                                @Html.Raw(@Model.JobRequirement)
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
                 </div>
+            </div>
             
         </div>
     </div>
@@ -147,3 +146,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     @Html.Action("Login", "Account")
 </body>
 </html>
+<script>
+    function findJobs() {
+        console.log('hello');
+        window.location.href = window.location.origin + '/Job/FindJobs?keyword=' + $('#txtKeyword').val() + '&location=' + $('#sel1 :selected').val();
+        return false;
+    }
+</script>

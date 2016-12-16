@@ -15,3 +15,4 @@ D:\Tutorial\TTCNPM\ItJobLatest\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\bin\Deb
 D:\Tutorial\TTCNPM\ItJobLatest\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\bin\Debug\ITJobSeeker.Model.pdb
 D:\Tutorial\TTCNPM\ItJobLatest\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.dll
 D:\Tutorial\TTCNPM\ItJobLatest\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.pdb
+D:\Tutorial\TTCNPM\ItJobLatest\ItJobSeeker\ITJobSeeker\ITJobSeeker.Model\obj\Debug\ITJobSeeker.Model.csprojResolveAssemblyReference.cache

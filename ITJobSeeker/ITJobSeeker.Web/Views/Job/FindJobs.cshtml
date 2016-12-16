@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "FindJobs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ITJobSeeker.Web.ViewModels.JobGridViewModel
+<div class="container">
+    <div class="single">
+        <div class="col-md-6">
+
+            @foreach (var item in Model.FirstColumnJob)
+            {
+                <div class="col_1">
+                    <div class="col-sm-4 row_2">
+                        <a href="@Url.Action("Detail", "Job", new {defaultUrl = "asd", id = item.ID }, null)"><img src="~/images/recruiter/@(item.Comapny.AvatarID).png" class="img-responsive" alt="" /></a>
+                    </div>
+                    <div class="col-sm-8 row_1">
+                        <h4><a href="@Url.Action("Detail", "Job", new {defaultUrl = "asd", id = item.ID }, null)">@item.Name</a></h4>
+                        <h6>
+                            @if (Model.HasLogin)
+                            {
+                                <span class="dot">@item.Salary </span>
+                            }
+                            else
+                            {
+                                <span class="dot">Login to view Salary </span>
+                            }
+                        </h6>
+                        <p>@item.SmallDescription </p>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-6">
+            @foreach (var item in Model.SecondColumnJob)
+            {
+                <div class="col_1">
+                    <div class="col-sm-4 row_2">
+                        <a href="@Url.Action("Detail", "Job", new { id = item.ID }, null)"><img src="~/images/recruiter/@(item.Comapny.AvatarID).png" class="img-responsive" alt="" /></a>
+                    </div>
+                    <div class="col-sm-8 row_1">
+                        <h4><a href="@Url.Action("Detail", "Job", new { id = item.ID }, null)">@item.Name</a></h4>
+                        <h6>
+                            @if (Model.HasLogin)
+                            {
+                                <span class="dot">@item.Salary </span>
+                            }
+                            else
+                            {
+                                <span class="dot">Login to view Salary </span>
+                            }
+
+                        </h6>
+                        <p>@item.SmallDescription</p>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            }
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+
+

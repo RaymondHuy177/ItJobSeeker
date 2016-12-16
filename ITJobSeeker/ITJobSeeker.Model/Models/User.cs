@@ -33,6 +33,8 @@ namespace ITJobSeeker.Model.Models
 
         public bool IsMale { get; set; }
 
+        public bool IsActive { get; set; }
+
         [Required]
         public Guid RoleID { get; set; }
 

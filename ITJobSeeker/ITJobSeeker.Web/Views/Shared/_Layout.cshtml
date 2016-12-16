@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
     <div id="main-container">
         <div id="main-header">
-            @Html.Action("Menu")
+            @Html.Action("Menu", "Home")
         </div>
         <div class="banner">
             <div id="main-search">
@@ -72,12 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     @Html.Action("JobSeekerRegister", "Account")
     @Html.Action("RecruiterRegister", "Account")
     @Html.Action("Login", "Account")
-        <!-- Modal -->
-        
     
-        @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")*@
-
         @RenderSection("scripts", required: false)
 </body>
 </html>

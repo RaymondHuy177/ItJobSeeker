@@ -61,6 +61,7 @@ namespace ITJobSeeker.Repository.Migrations
                         Password = c.String(nullable: false),
                         Telephone = c.String(),
                         IsMale = c.Boolean(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
                         RoleID = c.Guid(nullable: false),
                         Picture_ID = c.Guid(),
                     })

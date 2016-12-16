@@ -35,8 +35,12 @@ namespace ITJobSeeker.Web.Controllers
         }
         public ActionResult FindJobs(string keyword, string location)
         {
+            bool hasLogin = false;
+            Account account = (Account)Session["Account"];
+            hasLogin = account != null ? true : false;
             List<Job> jobs = jobService.Filter(keyword, location);
-            return View(jobs);
+            JobGridViewModel jobVM = new JobGridViewModel(jobs, hasLogin);
+            return View(jobVM);
         }
         public ActionResult Detail(string id)
         {

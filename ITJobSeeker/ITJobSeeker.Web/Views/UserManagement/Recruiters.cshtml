@@ -1,0 +1,308 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<ITJobSeeker.Model.Models.User>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Recruiter Job GridView</title>
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="~/assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/assets/vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css" />
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.css" />
+
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="~/assets/vendor/select2/css/select2.css" />
+    <link rel="stylesheet" href="~/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="~/assets/stylesheets/theme.css" />
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="~/assets/stylesheets/skins/default.css" />
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="~/assets/stylesheets/theme-custom.css">
+    <link rel="stylesheet" href="~/assets/vendor/summernote/summernote.css" />
+    <link rel="stylesheet" href="~/assets/vendor/codemirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="~/assets/vendor/codemirror/theme/monokai.css" />
+    <!-- Head Libs -->
+    <script src="~/assets/vendor/modernizr/modernizr.js"></script>
+    <script src="~/Scripts/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <section class="body">
+
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="../" class="logo">
+                    <img src="~/assets/images/logo.png" height="35" alt="Porto Admin" />
+                </a>
+                <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+
+            <!-- start: search & user box -->
+            <div class="header-right">
+
+                <span class="separator"></span>
+
+                <div id="userbox" class="userbox">
+                    <a href="#" data-toggle="dropdown">
+                        <figure class="profile-picture">
+                            <img src="~/assets/images/!logged-user.jpg" alt="Joseph Doe" class="img-circle" data-lock-picture="~/assets/images/!logged-user.jpg" />
+                        </figure>
+                        <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+                            <span class="name">John Doe Junior</span>
+                            <span class="role">administrator</span>
+                        </div>
+
+                        <i class="fa custom-caret"></i>
+                    </a>
+
+                    <div class="dropdown-menu">
+                        <ul class="list-unstyled">
+                            <li class="divider"></li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="fa fa-user"></i> My Profile</a>
+                            </li>
+                            <li>
+                                <a role="menuitem" tabindex="-1" onclick="logout()"><i class="fa fa-power-off"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end: search & user box -->
+        </header>
+        <!-- end: header -->
+
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+            <aside id="sidebar-left" class="sidebar-left">
+
+                <div class="sidebar-header">
+                    <div class="sidebar-title">
+                        Navigation
+                    </div>
+                    <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+
+                <div class="nano">
+                    <div class="nano-content">
+                        <nav id="menu" class="nav-main" role="navigation">
+                            <ul class="nav nav-main">
+                                <li>
+                                    <a href="index.html">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-columns" aria-hidden="true"></i>
+                                        <span>Account Management</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="@Url.Action("AccountGridView", "AccountManagement")">
+                                                User GridView
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("CreateUser", "AccountManagement")">
+                                                Register User
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="nav-parent">
+                                    <a>
+                                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                                        <span>Order Management</span>
+                                    </a>
+                                    <ul class="nav nav-children">
+                                        <li>
+                                            <a href="ui-elements-typography.html">
+                                                Typography
+                                            </a>
+                                        </li>
+                                        <li class="nav-parent">
+                                            <a>
+                                                Icons
+                                            </a>
+                                            <ul class="nav nav-children">
+                                                <li>
+                                                    <a href="ui-elements-icons-elusive.html">
+                                                        Elusive
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-font-awesome.html">
+                                                        Font Awesome
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-glyphicons.html">
+                                                        Glyphicons
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-line-icons.html">
+                                                        Line Icons
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="ui-elements-icons-meteocons.html">
+                                                        Meteocons
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="ui-elements-extra.html">
+                                                Extra
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+
+                        <hr class="separator" />
+
+                    </div>
+
+                    <script>
+							// Preserve Scroll Position
+							if (typeof localStorage !== 'undefined') {
+								if (localStorage.getItem('sidebar-left-position') !== null) {
+									var initialPosition = localStorage.getItem('sidebar-left-position'),
+										sidebarLeft = document.querySelector('#sidebar-left .nano-content');
+
+									sidebarLeft.scrollTop = initialPosition;
+								}
+							}
+                    </script>
+
+                </div>
+
+            </aside>
+            <!-- end: sidebar -->
+
+            <section role="main" class="content-body">
+                <header class="page-header">
+                    <h2>Recruiter Management</h2>
+
+                    <div class="right-wrapper pull-right">
+                        <ol class="breadcrumbs">
+                            <li>
+                                <a href="index.html">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li><span>Forms</span></li>
+                            <li><span>Basic</span></li>
+                        </ol>
+
+                        <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </header>
+
+                <!-- start: page -->
+                <section class="panel">
+                    <header class="panel-heading">
+                        <div class="panel-actions">
+                            <a href="#" class="panel-action panel-action-toggle" data-panel-toggle></a>
+                            <a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss></a>
+                        </div>
+
+                        <h2 class="panel-title">List Job</h2>
+                    </header>
+                    <div class="panel-body">
+                        <div class="row">
+                        </div>
+                        <table class="table table-bordered table-striped mb-none" id="datatable-editable">
+                            <thead>
+                                <tr id="row-deleted">
+                                    <th>User Name</th>
+                                    <th>Company Name</th>
+                                    <th>Address</th>
+                                    <th>Location</th>
+                                    <th>Type</th>
+                                    <th>Active</th>
+                                </tr>
+                            </thead>
+                            <tbody id="datatable-editable-tbody">
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="gradeU">
+
+                                        <td>@item.UserName</td>
+                                        <td>@item.Company.Name</td>
+                                        <td>@item.Company.Address</td>
+                                        <td>@item.Company.Location</td>
+                                        <td>@item.Company.Type</td>
+                                        <td>
+                                            @if (item.IsActive)
+                                            {
+                                                <input type="checkbox" checked="checked" onclick="DeActive('@item.ID')" />
+                                            }
+                                            else
+                                            {
+                                                <input type="checkbox" onclick="Active('@item.ID')"/>
+                                            }
+
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- end: page -->
+            </section>
+        </div>
+
+    </section>
+</body>
+</html>
+<script src="~/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+<script src="~/assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="~/assets/vendor/nanoscroller/nanoscroller.js"></script>
+<script src="~/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<!-- Specific Page Vendor -->
+<script src="~/assets/vendor/select2/js/select2.js"></script>
+<script src="~/assets/vendor/summernote/summernote.js"></script>
+<script src="~/assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
+<script src="~/assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+
+<!-- Theme Base, Components and Settings -->
+<script src="~/assets/javascripts/theme.js"></script>
+<!-- Theme Custom -->
+<script src="~/assets/javascripts/theme.custom.js"></script>
+
+<!-- Theme Initialization Files -->
+<script src="~/assets/javascripts/theme.init.js"></script>
+
+<!-- Examples -->
+<script src="~/assets/javascripts/tables/examples.datatables.editable.js"></script>
+<script src="~/assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+<script src="~/Scripts/user-management.js"></script>

@@ -74,5 +74,39 @@ namespace ITJobSeeker.Service.ServiceImpl
             user.Company = company;
             return user;
         }
+
+        public IEnumerable<User> GetAllJobSeekerGridView()
+        {
+            Role role = roleRepository.Get(r => r.Name == "JobSeeker");
+            IEnumerable<User> users = userRepository.GetMany(u => u.RoleID == role.ID);
+            return users;
+        }
+        
+
+        public IEnumerable<User> GetAllRecruiterGridView()
+        {
+            Role role = roleRepository.Get(r => r.Name == "Recruiter");
+            IEnumerable<User> users = userRepository.GetMany(u => u.RoleID == role.ID);
+            IEnumerable<Company> companies = companyRepository.GetAll();
+            foreach (User user in users)
+            {
+                foreach (Company company in companies)
+                {
+                    if (user.ID == company.ID)
+                    {
+                        user.Company = company;
+                        break;
+                    }
+                }
+            }
+            return users;
+        }
+
+        public void UpdateActiveStatus(string userID, bool status)
+        {
+            User user = userRepository.GetById(new Guid(userID));
+            user.IsActive = status;
+            unitOfWork.Commit();
+        }
     }
 }

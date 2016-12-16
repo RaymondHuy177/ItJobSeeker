@@ -53,7 +53,7 @@
                     FirstName = "Nguyen",
                     LastName = "Khang",
                     Password = "202cb962ac59075b964b07152d234b70",
-                    //Location= "HoChiMinh",
+                    IsActive = true,
                     //Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
@@ -67,11 +67,25 @@
                     FirstName = "Quan",
                     LastName = "Mai",
                     Password = "202cb962ac59075b964b07152d234b70",
-                    //Location = "HoChiMinh",
+                    IsActive = true,
                     //Address = "123 Pham Phu Thu",
                     IsMale = true,
                     Telephone = "0123456789",
                     RoleID = new Guid("31e2b54f-4168-42f0-9165-808d3d71d80f")
+                },
+                new Model.Models.User
+                {
+                    ID = new Guid("217ae484-e28e-4b5c-bb5c-90e622a73837"),
+                    Email = "ex2@yahoo.com",
+                    UserName = "ae2",
+                    FirstName = "Duong",
+                    LastName = "Le",
+                    Password = "202cb962ac59075b964b07152d234b70",
+                    IsActive = true,
+                    //Address = "123 Pham Phu Thu",
+                    IsMale = true,
+                    Telephone = "0123456789",
+                    RoleID = new Guid("8fab4cd3-d18a-4926-980f-d4859510fddf")
                 }
                 );
         }

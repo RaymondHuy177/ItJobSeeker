@@ -92,9 +92,10 @@ namespace ITJobSeeker.Service.ServiceImpl
             {
                 foreach (var company in companies)
                 {
-                    if (company.Location == location)
+                    if (company.Location == location && job.CompanyID == company.ID)
                     {
                         result.Add(job);
+                        break;
                     }
                 }
             }

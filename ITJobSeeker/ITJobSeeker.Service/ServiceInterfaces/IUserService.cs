@@ -16,5 +16,8 @@ namespace ITJobSeeker.Service.ServiceInterfaces
         void RegisterRecruiter(User Recruiter, Company company);
 
         User GetUserInfo(Guid id);
+        IEnumerable<User> GetAllJobSeekerGridView();
+        IEnumerable<User> GetAllRecruiterGridView();
+        void UpdateActiveStatus(string userID, bool status);
     }
 }

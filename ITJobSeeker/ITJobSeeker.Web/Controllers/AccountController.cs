@@ -100,7 +100,7 @@ namespace ITJobSeeker.Web.Controllers
             
             return Json(response);
         }
-
+        [HttpPost]
         public JsonResult Logout()
         {
             StandardResponse response = new StandardResponse();
