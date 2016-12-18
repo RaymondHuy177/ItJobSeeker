@@ -33,9 +33,9 @@ namespace ITJobSeeker.Web.Controllers
 
         public ActionResult JobRecruiterGridView()
         {
-            Guid id = new Guid("308dc584-e28e-4b5c-bb5c-90e622a73837");
+            Account account = (Account)Session["Account"];
             JobRecruiterGridView vm = new JobRecruiterGridView();
-            vm.PrepareViewModel(jobService.GetJobsByRecruiter(id));
+            vm.PrepareViewModel(jobService.GetJobsByRecruiter( new Guid(account.ID)));
             return View(vm);
         }
 

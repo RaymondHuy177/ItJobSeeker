@@ -277,6 +277,13 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="txtSmallDescription">Small Description</label>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control" id="txtSmallDescription"></textarea>
+                                        </div>
+                                    </div>
+
                                     <br />
                                     <footer class="panel-footer">
                                         <div class="row">
@@ -366,6 +373,7 @@
             FirstTechStack: $('#ddlFirstTechStackChosen :selected').val(),
             SecondTechStack: $('#ddlSecondTechStackChosen :selected').val(),
             ThirdTechStack: $('#ddlThirdTechStackChosen :selected').val(),
+            SmallDescription: $('#txtSmallDescription').val()
         }
         console.log(job);
         $.ajax({

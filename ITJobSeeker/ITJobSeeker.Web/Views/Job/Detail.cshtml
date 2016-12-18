@@ -119,19 +119,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     else
                                     { <p>Login to view salary</p> }
                                 </span>
-                                <button type="button" class="btn btn-default apply-btn">Ứng Tuyển</button>
+                                @*<button type="button" class="btn btn-default apply-btn">Ứng Tuyển</button>*@
                             </div>
                             <hr>
                             <div class="r2">
-                                <h1 class="title-descrip">Mô Tả Công Việc</h1>
+                                <h1 class="title-descrip">Description</h1>
                                 <p>@Html.Raw(@Model.JobDescription)</p>
                                 <br>
-                                <p>* Benefit :</p>
-                                <ul class="list-benefits" style="list-style-type:disc">
-                                    @Html.Raw(@Model.JobBenefit)
-                                </ul>
-                                <h1 class="title-descrip">Yêu Cầu Công Việc</h1>
+                                <h1 class="title-descrip">Requirement</h1>
                                 @Html.Raw(@Model.JobRequirement)
+                                <h1 class="title-descrip">Benefits</h1>
+                                    @Html.Raw(@Model.JobBenefit)
+                                
+                               
                             </div>
                         </div>
                     </div>
